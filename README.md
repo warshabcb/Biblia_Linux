@@ -9,10 +9,9 @@ Apuntes sobre comando en Linux y Powershell.
 
 ## Comandos Linux
 
-# Reconfigurar Zona Horaria en Debian
+### Reconfigurar Zona Horaria en Debian
 
-```bash
+```Bash
 dpkg-reconfigure tzdata
 ```
-
 

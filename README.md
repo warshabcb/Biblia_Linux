@@ -6,7 +6,7 @@ Apuntes sobre comando en Linux y Powershell.
 
 #### Reconfigurar Zona Horaria en Debian
 
-```Bash
+```bash
 dpkg-reconfigure tzdata
 ```
 

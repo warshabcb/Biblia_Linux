@@ -26,3 +26,24 @@ sudo nano /etc/network/interfaces
 
 ## Manejor de Zip | Unzip en Linux
 
+### Instalar Zip y Unzip
+
+```bash
+sudo apt install zip unzip
+```
+### Comprimir Archivo
+```bash
+zip archivo_comprimido.zip archivo_a_comprimir.txt
+```
+### Comprimir Directorio
+```bash
+zip -r archivo_comprimido.zip directorio_a_comprimir/
+```
+### Descomprimir Archivo
+```bash
+unzip archivo_comprimido.zip
+```
+### Descomprimir en Directorio
+```bash
+unzip archivo_comprimido.zip -d /ruta/del/directorio/
+```

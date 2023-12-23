@@ -24,7 +24,7 @@ sudo nano /etc/network/interfaces
 
 
 
-## Manejor de Zip | Unzip en Linux
+## Manejo de Zip | Unzip en Linux
 
 ### Instalar Zip y Unzip
 
@@ -47,3 +47,16 @@ unzip archivo_comprimido.zip
 ```bash
 unzip archivo_comprimido.zip -d /ruta/del/directorio/
 ```
+
+
+## Comandos Utiles
+
+### Contar Filas | Palabras | byte de un Archivo (wc -l = Lineas) (wc -w = Palabras) (wc -c = byte)
+```bash
+wc miarchivo.txt
+```
+Ejemplo:
+```
+12 42 256 miarchivo.txt
+```
+

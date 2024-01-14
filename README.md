@@ -60,3 +60,41 @@ Ejemplo:
 12 42 256 miarchivo.txt
 ```
 
+## Como Instalar PhpMyAdmin 
+
+### Ejecutar los Siguientes Comandos
+
+#### Actualiza lista de paquetes
+```
+sudo apt update
+```
+#### Instala PhpMyAdmin
+```
+sudo apt install phpmyadmin
+```
+
+#### Habilitar la Extensión PHP mcrypt y mbstring
+```
+sudo apt install php-mbstring php-zip php-gd php-json php-curl
+sudo phpenmod mbstring
+```
+#### Reiniciar Apache
+```
+sudo systemctl restart apache2
+
+```
+
+### Aumentar Limite a la hora de importar Archivos
+
+Se debe de buscar el archivo `php.ini`  con el comando `find`  en el servidor
+
+Ruta 
+```
+/etc/php/7.4/apache2/php.ini
+```
+
+Cambia los siguientes valores:
+
+`upload_max_filesize` Este valor define el tamaño máximo de archivo que se puede subir. Establécelo según tus necesidades, por ejemplo, 64M para un límite de 64 megabytes.
+`post_max_size` Este valor debe ser mayor o igual que `upload_max_filesize`. Habitualmente se establece un poco más alto que `upload_max_filesize`.
+`max_execution_time` y `max_input_time` : Estos valores controlan el tiempo máximo que PHP espera para la ejecución de scripts y la entrada de datos, respectivamente. Puedes aumentarlos según sea necesario.

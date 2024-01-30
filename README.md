@@ -60,7 +60,7 @@ Ejemplo:
 12 42 256 miarchivo.txt
 ```
 
-## Como Instalar PhpMyAdmin 
+## Como Instalar PhpMyAdmin Ubuntu 20.04 LTS
 
 ### Ejecutar los Siguientes Comandos
 

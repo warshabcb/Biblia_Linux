@@ -98,3 +98,27 @@ Cambia los siguientes valores:
 `upload_max_filesize` Este valor define el tamaño máximo de archivo que se puede subir. Establécelo según tus necesidades, por ejemplo, 64M para un límite de 64 megabytes.
 `post_max_size` Este valor debe ser mayor o igual que `upload_max_filesize`. Habitualmente se establece un poco más alto que `upload_max_filesize`.
 `max_execution_time` y `max_input_time` : Estos valores controlan el tiempo máximo que PHP espera para la ejecución de scripts y la entrada de datos, respectivamente. Puedes aumentarlos según sea necesario.
+
+
+## Python
+
+### Paquete para Crear Enviroment
+```
+sudo apt install python3-venv
+```
+### Crea Entorno 
+```
+python3 -m venv mi_entorno
+
+```
+### Activar Entorno
+```
+source mi_entorno/bin/activate
+
+```
+### Instalar Librerias
+```
+pip install matplotlib seaborn
+
+```
+

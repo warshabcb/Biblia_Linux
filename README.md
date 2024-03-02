@@ -2,6 +2,15 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
+
+
+## Sistema Operativo
+
+ ```/etc/password``` Contiene la informacion de Usuarios.
+ ```/etc/shadow``` Contiene la informacion de contraseñas de los usuarios.
+ 
+
+
 ## Manejo de Entorno Linux
 
 #### Reconfigurar Zona Horaria en Debian

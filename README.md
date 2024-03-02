@@ -6,8 +6,8 @@ Apuntes sobre comando en Linux y Powershell.
 
 ## Sistema Operativo
 
- ```/etc/password``` Contiene la informacion de Usuarios.
- ```/etc/shadow``` Contiene la informacion de contraseñas de los usuarios.
+ - ```/etc/password``` Contiene la informacion de Usuarios.
+ - ```/etc/shadow``` Contiene la informacion de contraseñas de los usuarios.
  
 
 

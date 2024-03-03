@@ -16,6 +16,7 @@ Apuntes sobre comando en Linux y Powershell.
 ## Programas Top
 - ```htop``` Monitor de Procesos.
 - ```btop``` Monitor de Procesos mas moderno.
+- ```figlet``` Genera texto con letras grandes en terminal.
 
 ## Manejo de Entorno Linux
 

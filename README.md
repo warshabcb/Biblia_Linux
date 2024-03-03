@@ -2,7 +2,10 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
-
+## Repositorios 
+### Seguridad
+- ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
+- 
 
 ## Sistema Operativo
 

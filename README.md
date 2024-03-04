@@ -12,7 +12,10 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/password``` Contiene la informacion de Usuarios.
  - ```/etc/shadow```   Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
- 
+
+## Problemas al instalar Tarjeta Video NVIDIA GTX 1650
+Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
+
 ## Programas Top
 - ```htop``` Monitor de Procesos.
 - ```btop``` Monitor de Procesos mas moderno.

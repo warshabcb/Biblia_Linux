@@ -13,7 +13,7 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/shadow```   Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
 
-## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 (```wget https://us.download.nvidia.com/XFree86/Linux-x86_64/550.54.14/NVIDIA-Linux-x86_64-550.54.14.run```)
+## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
 - Crear un archivo de configuración para el kernel: 
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:

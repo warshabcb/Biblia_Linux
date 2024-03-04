@@ -20,6 +20,36 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   ```
   sudo echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
   ```
+- Además, agrega la opción nomodeset para prevenir que el kernel cargue Nouveau antes de que se aplique la lista negra. Agrega la siguiente línea al mismo archivo:
+  ```
+  sudo echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
+  ```
+- Necesitas actualizar la configuración de GRUB, el cargador de arranque, para asegurarte de que se aplique la configuración de la lista negra. Abre el archivo de configuración de GRUB con un editor de texto:
+  ```
+  sudo nano /etc/default/grub
+  ```
+  Busca la línea que comienza con GRUB_CMDLINE_LINUX_DEFAULT y añade nouveau.modeset=0 al final de las comillas. Por ejemplo, si la línea era:
+  ```
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+  ```
+  Deberías cambiarla a:
+  ```
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet nouveau.modeset=0"
+  ```
+- Guarda y cierra el archivo. Luego, actualiza la configuración de GRUB con:
+  ```
+  sudo update-grub
+  ```
+- Para asegurarte de que los cambios tomen efecto en el próximo arranque, regenera el initramfs con el siguiente comando:
+  ```
+  sudo update-initramfs -u
+  ```
+- Después de realizar estos cambios, reinicia tu sistema para aplicarlos:
+  ```
+  sudo reboot
+  ```
+  
+  
 ## Programas Top
 - ```htop``` Monitor de Procesos.
 - ```btop``` Monitor de Procesos mas moderno.

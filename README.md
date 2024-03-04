@@ -104,6 +104,14 @@ unzip archivo_comprimido.zip
 ```bash
 unzip archivo_comprimido.zip -d /ruta/del/directorio/
 ```
+### Descomprimir Archivos tar ejemplo (rockyou.txt.tar.gz)
+ - -x: indica a tar que extraiga los archivos.
+ - -z: le dice a tar que descomprima el archivo (ya que está comprimido con gzip).
+ - -v: significa "verbose", lo que hace que tar muestre los archivos a medida que se extraen (esto es opcional, pero útil para ver lo que está sucediendo).
+ - -f: le dice a tar que el siguiente argumento es el nombre del archivo a procesar, en este caso, rockyou.txt.tar.gz.
+```
+tar -xzvf rockyou.txt.tar.gz
+```
 
 
 ## Comandos Utiles

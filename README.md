@@ -48,6 +48,10 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   ```
   sudo reboot
   ```
+- Validar si esta Instalado Correctamente
+  ```
+  nvidia-smi
+  ```
   
   
 ## Programas Top

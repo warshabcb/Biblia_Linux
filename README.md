@@ -15,7 +15,13 @@ Apuntes sobre comando en Linux y Powershell.
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
-- Crear un archivo de configuración para el kernel: 
+- Crear un archivo de configuración para el kernel:
+- Primero Esto:
+  ```
+  sudo apt-get install linux-headers-$(uname -r)
+  sudo apt-get update
+  sudo apt-get install pkg-config
+  ```
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
   ```
   sudo echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf

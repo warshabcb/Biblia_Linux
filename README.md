@@ -21,6 +21,7 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   sudo apt-get install linux-headers-$(uname -r)
   sudo apt-get update
   sudo apt-get install pkg-config
+  sudo apt-get install software-properties-common
   ```
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
   ```

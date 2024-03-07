@@ -3,9 +3,24 @@
 Apuntes sobre comando en Linux y Powershell.
 
 ## Repositorios 
+
+### Repositorio Kali en Debian
+- Agrega los repositorios de Kali.
+  ```
+  deb http://http.kali.org/kali kali-rolling main non-free contrib
+  ```
+- Agrega la clave GPG de Kali:
+  ```
+  wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add -
+  ```
+- Instala las herramientas de Kali
+  ```
+  sudo apt install kali-linux-default
+  ```
+
 ### Seguridad
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
-- 
+  
 
 ## Sistema Operativo
 

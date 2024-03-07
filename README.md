@@ -28,6 +28,22 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/shadow```   Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
 
+## Buscar Procesos Sistema
+Podemos usar el siguiente comando : 
+```
+pgrep openvpn
+```
+y matar el proceso con 
+```
+sudo kill -9 PID
+```
+o 
+
+```
+sudo pkill openvpn
+```
+
+
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
 - Crear un archivo de configuración para el kernel:

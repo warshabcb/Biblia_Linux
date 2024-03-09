@@ -96,6 +96,7 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
 - ```htop``` Monitor de Procesos.
 - ```btop``` Monitor de Procesos mas moderno.
 - ```figlet``` Genera texto con letras grandes en terminal.
+- ```cmatrix```Wallpaper Matrix en Terminal.
 
 ## Manejo de Entorno Linux
 

@@ -2,6 +2,14 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
+## $ _ Bash Prompt Generator
+-  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
+   ``` bash
+    PS1='\[\e[38;5;28;1m\]\u@\H\[\e[0m\]:\[\e[38;5;51m\][\[\e[90m\]\W\[\e[38;5;51m\]]\[\e[38;5;28;1m\]>\[\e[0m\]'   # Personal.
+   ```
+   
+
+
 ## Repositorios 
 
 ### Repositorio Kali en Debian

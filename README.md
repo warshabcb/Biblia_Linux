@@ -51,6 +51,12 @@ o
 sudo pkill openvpn
 ```
 
+## Buscar Datos en logs con zgrep y grep 
+- Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.
+  ```
+  zgrep "Mensaje recibido" *.log.gz | awk '{print substr($0,196,21), substr($0, otro_inicio, otro_largo)}'
+
+  ```
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```

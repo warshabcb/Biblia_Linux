@@ -59,6 +59,7 @@ sudo pkill openvpn
   ```
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
+
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
 - Crear un archivo de configuración para el kernel:
 - Primero Esto:
@@ -103,6 +104,11 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
 - Validar si esta Instalado Correctamente
   ```
   nvidia-smi
+  ```
+- Instalar Cuda Drivers
+  ```
+  wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run
+  sudo sh cuda_12.4.0_550.54.14_linux.run
   ```
   
   

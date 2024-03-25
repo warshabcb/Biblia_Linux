@@ -75,7 +75,9 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common
   sudo apt install build-essential
-  sudo apt-get install wireless-tools   # iwconfig 
+  sudo apt-get install wireless-tools   # iwconfig
+  sudo apt-get install net-tools        # ifconfig -a
+
   sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
   ```
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:

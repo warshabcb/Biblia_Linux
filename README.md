@@ -77,6 +77,8 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   sudo apt install build-essential
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
+  sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
+
 
   sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
   ```

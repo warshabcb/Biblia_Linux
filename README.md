@@ -197,6 +197,9 @@ Ejemplo:
 ```
 12 42 256 miarchivo.txt
 ```
+Lineas = ```wc -l ```
+Palabras = ```wc -w```
+Caracteres = ```wc -m```
 
 ## Como Instalar PhpMyAdmin Ubuntu 20.04 LTS
 

@@ -4,17 +4,11 @@ Apuntes sobre comando en Linux y Powershell.
 
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
-   ``` bash
-    PS1='\[\e[38;5;28;1m\]\u@\H\[\e[0m\]:\[\e[38;5;51m\][\[\e[90m\]\W\[\e[38;5;51m\]]\[\e[38;5;28;1m\]>\[\e[0m\]'   # Personal.
-   ```
-   ```
-   PS1='\[\e[97;1m\]\u\[\e[38;5;34;2m\]@\[\e[0;1;97m\]\h\[\e[0m\]:[\[\e[38;5;220m\]\w\[\e[0m\]]--\[\e[1m\]>\[\e[0m\]'
-   ```
+  
    ```
    PS1='\[\e[97;1m\]\u\[\e[97m\]@\[\e[97m\]\h\[\e[0m\]:\[\e[91m\][\[\e[38;5;220m\]\w\[\e[91m\]]\[\e[0m\]--\[\e[1m\]>\[\e[0m\]'
    ```
    
-
 
 ## Repositorios 
 
@@ -143,6 +137,16 @@ dpkg-reconfigure tzdata
 ```bash
 sudo systemctl restart networking.service
 ```
+
+#### Reiniciar SSH (Debian)
+```bash
+sudo systemctl restart sshd
+```
+#### Permitir Root SSH (Modificar Archivo /etc/ssh/sshd_config) Habilitar Linea ```PermitRootLogin yes```
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
 #### Status Red Linux (Debian)
 ```bash
 sudo systemctl status networking.service
@@ -151,6 +155,7 @@ sudo systemctl status networking.service
 ```bash
 sudo nano /etc/network/interfaces
 ```
+
 
 
 

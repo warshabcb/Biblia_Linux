@@ -80,15 +80,13 @@ Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by y
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
-
-
   sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
   ```
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
   ```
   sudo echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
   ```
-- Además, agrega la opción nomodeset para prevenir que el kernel cargue Nouveau antes de que se aplique la lista negra. Agrega la siguiente línea al mismo archivo:
+- Además, agrega la opción nomodeset para prevenir que el kernel cargue Nouveau antes de que se aplique la lista negra. Agrega la siguiente   línea al mismo archivo:
   ```
   sudo echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
   ```

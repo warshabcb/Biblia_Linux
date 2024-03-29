@@ -40,16 +40,16 @@ Apuntes sobre comando en Linux y Powershell.
    Podemos usar el siguiente comando : 
 
 ```
-pgrep openvpn
+  pgrep openvpn
 ```
 y matar el proceso con 
 ```
-sudo kill -9 PID
+  sudo kill -9 PID
 ```
 o 
 
 ```
-sudo pkill openvpn
+  sudo pkill openvpn
 ```
 
 ## Buscar Datos en logs con zgrep y grep 

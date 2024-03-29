@@ -75,6 +75,11 @@ o
    awk -F, '{ count++ } END {print "La cuenta es de : " count}' fake_data.txt
    ```
    ![Image text](Imagenes/Contar_Awk.png)
+ - Para saber el tamaño de una columna usar el Comando:
+   ```
+   awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
+   ```
+   ![Image text](Imagenes/Length_Awk.png)
 
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 

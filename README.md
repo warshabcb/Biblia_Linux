@@ -66,9 +66,9 @@ o
    ```
    ![Image text](Imagenes/Consulta_AWK_$4.png)
  - Para los casos en que se desea sumar una columna podemos usar el siguiente Comando:
-  ```
+   ```
    awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
-  ```
+   ```
    ![Image text](Imagenes/Suma_Awk.png)
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 

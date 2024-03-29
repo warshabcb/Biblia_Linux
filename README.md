@@ -69,7 +69,7 @@ o
 ```
   awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
 ```
-  ![Image text](Imagenes/Suma_Awk.png)
+   ![Image text](Imagenes/Suma_Awk.png)
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 

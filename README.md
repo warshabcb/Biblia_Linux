@@ -84,7 +84,7 @@ o
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 
-Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
+Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding.```
 - Crear un archivo de configuración para el kernel:
 - Instalar estos paquetes necesarios primero:
   ```
@@ -177,9 +177,6 @@ sudo systemctl status networking.service
 ```bash
 sudo nano /etc/network/interfaces
 ```
-
-
-
 
 ## Manejo de Zip | Unzip en Linux
 

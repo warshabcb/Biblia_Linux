@@ -58,6 +58,14 @@ sudo pkill openvpn
 
   ```
 
+ ## Comando AWK
+
+ - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100.
+   ```
+   awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt
+   ```
+   ![Image text](Imagenes/Consulta_AWK_$4.png)
+
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```

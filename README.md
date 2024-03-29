@@ -70,7 +70,7 @@ o
 
 Mensaje Error : ```  WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. ```
 - Crear un archivo de configuración para el kernel:
-- Primero Esto:
+- Instalar estos paquetes necesarios primero:
   ```
   sudo apt-get install linux-headers-$(uname -r)
   sudo apt-get update

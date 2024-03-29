@@ -29,7 +29,6 @@ Apuntes sobre comando en Linux y Powershell.
 ### Seguridad
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
   
-
 ## Sistema Operativo
 
  - ```/etc/password``` Contiene la informacion de Usuarios.
@@ -37,7 +36,9 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
 
 ## Buscar Procesos Sistema
-Podemos usar el siguiente comando : 
+
+   Podemos usar el siguiente comando : 
+
 ```
 pgrep openvpn
 ```

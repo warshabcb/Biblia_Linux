@@ -70,6 +70,12 @@ o
    awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
    ```
    ![Image text](Imagenes/Suma_Awk.png)
+ - Para los casos en que se desea Contar una columna podemos usar el siguiente Comando:
+   ```
+   awk -F, '{ count++ } END {print "La cuenta es de : " count}' fake_data.txt
+   ```
+   ![Image text](Imagenes/Contar_Awk.png)
+
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 

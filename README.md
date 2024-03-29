@@ -60,7 +60,7 @@ sudo pkill openvpn
 
  ## Comando AWK
 
- - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100.
+ - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100.  ```%-20s``` Indica que Genere un Espacio para la primer columna de 20  y el ```\n``` es el Salto de linea.
    ```
    awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt
    ```

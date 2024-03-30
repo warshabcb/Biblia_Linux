@@ -60,7 +60,8 @@ systemctl list-units --type=service
   ```
   Ctrl+z
   ```
-  
+  ![Image text](Imagenes/Ctrl+z.png)
+
 
 ## Comando TOP
 

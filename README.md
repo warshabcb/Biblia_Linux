@@ -76,7 +76,7 @@ systemctl list-units --type=service
   ``` Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
    renice 10 -p #proceso    
   ```
-
+  ![Image text](Imagenes/CPU_Renice.png)
 
 
 ## Comando TOP

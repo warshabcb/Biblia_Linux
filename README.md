@@ -65,7 +65,9 @@ systemctl list-units --type=service
   ```
   ./infinito.sh &
   ```
-  
+- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos)
+
+
 ## Comando TOP
 
 - Al presionar la tecla ```s``` este nos permite cambiar la velocidad de actualizacion.

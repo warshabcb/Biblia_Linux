@@ -65,7 +65,7 @@ systemctl list-units --type=service
   ```
   ./infinito.sh &
   ```
-- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos)
+- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad
 
 
 ## Comando TOP

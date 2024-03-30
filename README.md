@@ -65,6 +65,10 @@ systemctl list-units --type=service
   ```
   ./infinito.sh &
   ```
+- Ejecutar programa en un solo CPU y en segundo plano.
+  ```
+  taskset --cpu-list 1 ./infinito.sh &
+  ```
 - Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad
   ``` Nice
   taskset --cpu-list 1 nice -n 10 ./infinito.sh &  
@@ -73,10 +77,7 @@ systemctl list-units --type=service
    renice 10 -p #proceso    
   ```
 
-- Ejecutar programa en un solo CPU y en segundo plano.
-  ```
-  taskset --cpu-list 1 ./infinito.sh &
-  ```
+
 
 ## Comando TOP
 

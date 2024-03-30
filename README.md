@@ -65,14 +65,15 @@ systemctl list-units --type=service
 - Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del ```=``` mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
 
 
-## Comando Zgrep y AWK
-- Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.
-  ```
-  zgrep "Mensaje recibido" *.log.gz | awk '{print substr($0,196,21), substr($0, otro_inicio, otro_largo)}'
-  ```
+ 
 
- ## Comando AWK
 
+ ## Comando AWK & GREP
+
+ - Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.
+  ```
+   zgrep "Mensaje recibido" *.log.gz | awk '{print substr($0,196,21), substr($0, otro_inicio, otro_largo)}'
+  ```
  - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100 (```$4<=100```). Este Comando  ```%-20s``` Indica que Genere un espacio para la primer columna de 20  y el ```\n``` es el Salto de linea.
    ```
    awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt

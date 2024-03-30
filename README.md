@@ -36,6 +36,13 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
  
+# Networking 
+ - Mostrar estadisticas de Conecciones  ```ss -ta``` Muestra los Sockect TCP  ```ss -tu``` Muestra los Sockect UTP.
+ - Mostrar tablas de rutas de nuestra PC  ```netstat -nr```.
+ - Mostrar Conecciones TCP ```netstat -at```.
+ - Mostrar Conecciones UTP ```netstat -au```.
+
+
 
 ## Servicios en Ejecucion Debian
   Con este comando podemos ver todos los servicios que estan en ejecucion en nuestro sistema.

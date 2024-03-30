@@ -26,7 +26,7 @@ Apuntes sobre comando en Linux y Powershell.
   sudo apt install kali-linux-default
   ```
 
-### Seguridad
+### Repositorios Github 
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
   
 ## Sistema Operativo

@@ -56,6 +56,11 @@ systemctl list-units --type=service
   ```
     sudo pkill openvpn
   ```
+- Detener procesos ```Ctrl+z``` 
+  ```
+  Ctrl+z
+  ```
+  
 
 ## Comando TOP
 

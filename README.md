@@ -41,8 +41,8 @@ Apuntes sobre comando en Linux y Powershell.
  - Mostrar tablas de rutas de nuestra PC  ```netstat -nr```.
  - Mostrar Conecciones TCP ```netstat -at```.
  - Mostrar Conecciones UTP ```netstat -au```.
-
-
+ - Mostrar Conecciones en Escucha ```netstat -l```.
+ - Mostrar Conecciones Establecidas ```netstat -pntu```.
 
 ## Servicios en Ejecucion Debian
   Con este comando podemos ver todos los servicios que estan en ejecucion en nuestro sistema.

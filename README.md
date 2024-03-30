@@ -42,7 +42,7 @@ systemctl list-units --type=service
 ```
 
 
-## Buscar & Matar Procesos Sistema
+## Buscar | Priorizar | Matar Procesos Sistema
 
 - Buscar procesos por nombre:
   ```

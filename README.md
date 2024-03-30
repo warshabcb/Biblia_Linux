@@ -44,17 +44,15 @@ systemctl list-units --type=service
 
 ## Buscar Procesos Sistema
 
-   Podemos usar el siguiente comando : 
-
+- Buscar procesos por nombre:
   ```
     pgrep openvpn
   ```
-y matar el proceso con 
+- Matar un proceso por medio del PIP
   ```
   sudo kill -9 PID
   ```
-o 
-
+- Matar un proceso por medio del nombre:
   ```
   sudo pkill openvpn
   ```

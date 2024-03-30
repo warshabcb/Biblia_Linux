@@ -61,11 +61,11 @@ systemctl list-units --type=service
   Ctrl+z
   ```
   ![Image text](Imagenes/Ctrl+z.png)
-
 - Ejecutar un proceso en segundo plano.
   ```
   ./infinito.sh &
   ```
+  
 ## Comando TOP
 
 - Al presionar la tecla ```s``` este nos permite cambiar la velocidad de actualizacion.

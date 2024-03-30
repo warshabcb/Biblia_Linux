@@ -68,6 +68,11 @@ systemctl list-units --type=service
 - Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad
 
 
+- Ejecutar programa en un solo CPU y en segundo plano.
+  ```
+  taskset --cpu-list 1 ./infinito.sh &
+  ```
+
 ## Comando TOP
 
 - Al presionar la tecla ```s``` este nos permite cambiar la velocidad de actualizacion.

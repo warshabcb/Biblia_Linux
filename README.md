@@ -17,11 +17,11 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   deb http://http.kali.org/kali kali-rolling main non-free contrib
   ```
-- Agrega la clave GPG de Kali:
+- Agrega la clave GPG de Kali.
   ```
   wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add -
   ```
-- Instala las herramientas de Kali
+- Instala las herramientas de Kali.
   ```
   sudo apt install kali-linux-default
   ```
@@ -31,9 +31,11 @@ Apuntes sobre comando en Linux y Powershell.
   
 ## Sistema Operativo
 
- - ```/etc/password``` Contiene la informacion de Usuarios.
- - ```/etc/shadow```   Contiene la informacion de contraseñas de los usuarios.
- - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
+ - ```/etc/password```    Contiene la informacion de Usuarios.
+ - ```/etc/shadow```      Contiene la informacion de contraseñas de los usuarios.
+ - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
+ - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
+ 
 
 ## Servicios en Ejecucion Debian
   Con este comando podemos ver todos los servicios que estan en ejecucion en nuestro sistema.

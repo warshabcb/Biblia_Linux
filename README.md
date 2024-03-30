@@ -50,11 +50,11 @@ systemctl list-units --type=service
   ```
 - Matar un proceso por medio del PIP
   ```
-  sudo kill -9 PID
+    sudo kill -9 PID
   ```
 - Matar un proceso por medio del nombre:
   ```
-  sudo pkill openvpn
+    sudo pkill openvpn
   ```
 
 ## Comando TOP

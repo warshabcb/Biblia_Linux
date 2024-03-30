@@ -36,6 +36,7 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
 
 ## Servicios en Ejecucion Debian
+  Con este comando podemos ver todos los servicios que estan en ejecucion en nuestro sistema.
 ```
 systemctl list-units --type=service
 ```

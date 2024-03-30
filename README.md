@@ -35,6 +35,12 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/shadow```   Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```    Contiene la informacion de grupos y sus usuarios.
 
+## Servicios en Ejecucion Debian
+```
+systemctl list-units --type=service
+```
+
+
 ## Buscar Procesos Sistema
 
    Podemos usar el siguiente comando : 

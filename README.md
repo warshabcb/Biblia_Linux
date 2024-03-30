@@ -46,18 +46,26 @@ systemctl list-units --type=service
 
    Podemos usar el siguiente comando : 
 
-```
-  pgrep openvpn
-```
+  ```
+    pgrep openvpn
+  ```
 y matar el proceso con 
-```
+  ```
   sudo kill -9 PID
-```
+  ```
 o 
 
-```
+  ```
   sudo pkill openvpn
-```
+  ```
+
+## Comando TOP
+
+- Al presionar la tecla ```s``` este nos permite cambiar la velocidad de actualizacion.
+- Filtrar procesos por el nombre del Usuario ```u```.
+- Cambiar valores de medicion a Megas | Gigas etc  ```e```.
+- Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del = mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
+
 
 ## Comando Zgrep y AWK
 - Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.

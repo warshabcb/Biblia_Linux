@@ -31,6 +31,11 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
   ```
+- Se recomienda agregar el repositorio en esta ruta ```/etc/apt/sources.list.d/``` y no en el fichero ```/etc/apt/sources.list```.
+  ```
+   sudo add-apt-repository "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware"
+  ```
+
 - Agrega la clave GPG de Kali.
   ```
   wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add -

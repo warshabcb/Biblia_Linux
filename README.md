@@ -44,6 +44,13 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   gpg -o kali-key.gpg --dearmor archive-key.asc
   ```
+- Ahora podemos copiar el archivo en la ruta : ```/etc/apt/keyrings/```
+  ```
+  cp kali-key.gpg /etc/apt/keyrings/
+  ```
+- Ahora ya podemos modificar la ruta del archivo generado en ```/etc/apt/sources.list.d/``` Archivo ```archive_uri-http_http_kali_org_kali-bookworm.list```.
+
+
 - Instala las herramientas de Kali.
   ```
   sudo apt install kali-linux-default

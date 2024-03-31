@@ -40,6 +40,10 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   wget  https://archive.kali.org/archive-key.asc 
   ```
+- Para convertir el archivo ```archive-key.as```  a un archivo ```gpg`` se realiza con el siguiente comando.
+  ```
+  gpg -o kali-key.gpg --dearmor archive-key.asc
+  ```
 - Instala las herramientas de Kali.
   ```
   sudo apt install kali-linux-default

@@ -51,9 +51,9 @@ Apuntes sobre comando en Linux y Powershell.
 - Ahora ya podemos modificar el archivo generado en ```/etc/apt/sources.list.d/``` Archivo ```archive_uri-http_http_kali_org_kali-bookworm.list```.
 
 - Ahora Modificamos el archivo con la siguiente Linea
-```
-deb [signed-by=/etc/apt/keyrings/kali-key.gpg] http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
-```
+  ```
+  deb [signed-by=/etc/apt/keyrings/kali-key.gpg] http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
+  ```
 
 - Instala las herramientas de Kali.
   ```

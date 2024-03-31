@@ -37,7 +37,9 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
  
 # Networking 
+ - Saber mi IP Publica ```curl icanhazip.com```.
  - Mostrar estadisticas de Conecciones  ```ss -ta``` Muestra los Sockect TCP  ```ss -tu``` Muestra los Sockect UTP.
+ - Comando para localizar puerto en uso y el proceso que lo esta utulizando ```sudo ss -lptn 'sport = :8080'```.
  - Mostrar tablas de rutas de nuestra PC  ```netstat -nr```.
  - Mostrar Conecciones TCP ```netstat -at```.
  - Mostrar Conecciones UTP ```netstat -au```.

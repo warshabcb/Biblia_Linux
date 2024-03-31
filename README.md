@@ -24,8 +24,10 @@ Apuntes sobre comando en Linux y Powershell.
 
 
 
-### Repositorio Kali en Debian
-- Agrega los repositorios de Kali.
+### Repositorio Kali en Debian (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
+- Buscar el repositorio
+   ![Image text](Imagenes/Repo_Kali.png)
+
   ```
   deb http://http.kali.org/kali kali-rolling main non-free contrib
   ```

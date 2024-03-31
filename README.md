@@ -54,6 +54,7 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   deb [signed-by=/etc/apt/keyrings/kali-key.gpg] http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
   ```
+- Ahora ya podemos ejecutar el update.
 
 - Instala las herramientas de Kali.
   ```

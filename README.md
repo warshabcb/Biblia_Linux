@@ -10,7 +10,19 @@ Apuntes sobre comando en Linux y Powershell.
    ```
    
 
-## Repositorios 
+## Paquetes en Linux
+- Buscar Paquetes ```sudo apt search openssh-server```.
+- Otra forma de buscar paquetes ```dpkg -s top```.
+- Instalar Paquetes manual ```sudo dpkg -i paquete.deb```.
+- Eliminar paquete instalado ```sudo apt remove paquete```.
+- Listar todos los paquetes instalados ```dpkg -l```.
+- Comprobar la version del Kernel ```uname -sr```.
+- Actualizar Kernel ```sudo apt dist-upgrade``` que equivale a un ```sudo apt upgrade```.
+
+
+
+
+
 
 ### Repositorio Kali en Debian
 - Agrega los repositorios de Kali.
@@ -35,6 +47,7 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/shadow```      Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
+ - ```/etc/apt/sources.list``` Archivo de repositorios del sistema.
  
 # Networking 
  - Saber mi IP Publica ```curl icanhazip.com```.

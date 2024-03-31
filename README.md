@@ -48,7 +48,7 @@ Apuntes sobre comando en Linux y Powershell.
   ```
   cp kali-key.gpg /etc/apt/keyrings/
   ```
-- Ahora ya podemos modificar la ruta del archivo generado en ```/etc/apt/sources.list.d/``` Archivo ```archive_uri-http_http_kali_org_kali-bookworm.list```.
+- Ahora ya podemos modificar el archivo generado en ```/etc/apt/sources.list.d/``` Archivo ```archive_uri-http_http_kali_org_kali-bookworm.list```.
 
 
 - Instala las herramientas de Kali.

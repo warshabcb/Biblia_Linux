@@ -52,7 +52,6 @@ Apuntes sobre comando en Linux y Powershell.
 systemctl list-units --type=service
 ```
 
-
 ## Buscar | Priorizar | Matar Procesos Sistema
 
 - Buscar procesos por nombre:
@@ -96,9 +95,6 @@ systemctl list-units --type=service
 - Filtrar procesos por el nombre del Usuario ```u```.
 - Cambiar valores de medicion a Megas | Gigas etc  ```e```.
 - Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del ```=``` mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
-
-
- 
 
 
  ## Comando AWK & GREP

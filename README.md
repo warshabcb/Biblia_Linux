@@ -24,12 +24,12 @@ Apuntes sobre comando en Linux y Powershell.
 
 
 
-### Repositorio Kali en Debian (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
-- Buscar el repositorio
+### Repositorio Kali en Debian 
+- Url Repo Kali (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
    ![Image text](Imagenes/Repo_Kali.png)
 
   ```
-  deb http://http.kali.org/kali kali-rolling main non-free contrib
+  deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
   ```
 - Agrega la clave GPG de Kali.
   ```

@@ -56,7 +56,7 @@ Apuntes sobre comando en Linux y Powershell.
   ```
 - Ahora ya podemos ejecutar el update.
 
-  ```sudo apt update && sudo apt upgrade -y```
+  ```sudo apt update && sudo apt upgrade -y```  or ```sudo apt full-upgrade```
 
 - Instala las herramientas de Kali.
   ```

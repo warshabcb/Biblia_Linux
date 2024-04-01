@@ -78,7 +78,7 @@ Apuntes sobre comando en Linux y Powershell.
 ### Variables de Entorno
  -  Mostrar lista de variables de Entorno. ```printenv```.
 ### Funciones de Entorno
- -  Para ver todas las funciones que tenemos podemos ejecutar ```set`` y este nos mostrara las diferentes configuraciones que tenemos.
+ -  Para ver todas las funciones que tenemos podemos ejecutar ```set``` y este nos mostrara las diferentes configuraciones que tenemos.
 # Networking 
  - Saber mi IP Publica ```curl icanhazip.com```.
  - Mostrar estadisticas de Conecciones  ```ss -ta``` Muestra los Sockect TCP  ```ss -tu``` Muestra los Sockect UTP.

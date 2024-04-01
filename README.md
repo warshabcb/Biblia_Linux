@@ -56,6 +56,8 @@ Apuntes sobre comando en Linux y Powershell.
   ```
 - Ahora ya podemos ejecutar el update.
 
+  ```sudo apt update && sudo apt upgrade -y```
+
 - Instala las herramientas de Kali.
   ```
   sudo apt install kali-linux-default

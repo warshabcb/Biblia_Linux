@@ -141,7 +141,7 @@ systemctl list-units --type=service
 
  ## Expresiones Regulares
 
-     ![Image text](Imagenes/Regular_Expressions.png)
+  ![Image text](Imagenes/Regular_Expressions.png)
 
  ## Comando AWK & GREP
 

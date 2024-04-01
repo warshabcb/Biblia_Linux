@@ -139,6 +139,9 @@ systemctl list-units --type=service
 - Cambiar valores de medicion a Megas | Gigas etc  ```e```.
 - Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del ```=``` mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
 
+ ## Expresiones Regulares
+
+     ![Image text](Imagenes/Regular_Expressions.png)
 
  ## Comando AWK & GREP
 
@@ -283,7 +286,7 @@ zip archivo_comprimido.zip archivo_a_comprimir.txt
 zip -r archivo_comprimido.zip directorio_a_comprimir/
 ```
 ```
-gzip -r directorio
+gzip -r directorio  // comprime los archivos dentro del directorio no la carpeta
 ```
 ### Descomprimir Archivo
 ```bash

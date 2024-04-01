@@ -20,10 +20,6 @@ Apuntes sobre comando en Linux y Powershell.
 - Actualizar Kernel ```sudo apt dist-upgrade``` que equivale a un ```sudo apt upgrade```.
 
 
-
-
-
-
 ### Repositorio Kali en Debian 
 - Url Repo Kali (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
    ![Image text](Imagenes/Repo_Kali.png)
@@ -68,11 +64,15 @@ Apuntes sobre comando en Linux y Powershell.
   
 ## Sistema Operativo
 
+### Directorios Importantes
  - ```/etc/password```    Contiene la informacion de Usuarios.
  - ```/etc/shadow```      Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
  - ```/etc/apt/sources.list``` Archivo de repositorios del sistema.
+ 
+### Variables de Entorno
+ -  Mostrar lista de variables de Entorno. ```printenv```.
  
 # Networking 
  - Saber mi IP Publica ```curl icanhazip.com```.

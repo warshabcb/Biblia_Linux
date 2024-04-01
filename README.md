@@ -282,6 +282,9 @@ zip archivo_comprimido.zip archivo_a_comprimir.txt
 ```bash
 zip -r archivo_comprimido.zip directorio_a_comprimir/
 ```
+```
+gzip -r directorio
+```
 ### Descomprimir Archivo
 ```bash
 unzip archivo_comprimido.zip

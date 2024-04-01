@@ -70,10 +70,12 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
  - ```/etc/apt/sources.list``` Archivo de repositorios del sistema.
+ - ```/etc/profile```     Archivo que contiene informacion de profile general.
  
 ### Variables de Entorno
  -  Mostrar lista de variables de Entorno. ```printenv```.
- 
+### Funciones de Entorno
+ -  
 # Networking 
  - Saber mi IP Publica ```curl icanhazip.com```.
  - Mostrar estadisticas de Conecciones  ```ss -ta``` Muestra los Sockect TCP  ```ss -tu``` Muestra los Sockect UTP.

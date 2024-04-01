@@ -275,6 +275,8 @@ sudo apt install zip unzip
 ```bash
 zip archivo_comprimido.zip archivo_a_comprimir.txt
 ```
+``` gzip file
+```
 ### Comprimir Directorio
 ```bash
 zip -r archivo_comprimido.zip directorio_a_comprimir/

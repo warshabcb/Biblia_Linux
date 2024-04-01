@@ -74,11 +74,11 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/bash.bashrc``` Permite definir variables de entorno y scripts que estarán disponibles para programas iniciados desde la shell bash. Las variables que se definan en este fichero no van a estar disponibles para programas iniciados desde la interfaz gráfica. No se ejecuta en shells con login.
  - ```~/.profile``` Permite definir variables de entorno y scripts. Este fichero se ejecutará al iniciar la sesión de Escritorio o en una shell con login. Las variables afectan a todos los programas ejecutados desde el escritorio gráfico o desde la shell.
  - ```~/.bashrc``` Permite definir variables de entorno y scripts. Se ejecuta cuando se abre la shell sin necesidad de hacer login. 
-  
+
 ### Variables de Entorno
  -  Mostrar lista de variables de Entorno. ```printenv```.
 ### Funciones de Entorno
- -  
+ -  Para ver todas las funciones que tenemos podemos ejecutar ```set`` y este nos mostrara las diferentes configuraciones que tenemos.
 # Networking 
  - Saber mi IP Publica ```curl icanhazip.com```.
  - Mostrar estadisticas de Conecciones  ```ss -ta``` Muestra los Sockect TCP  ```ss -tu``` Muestra los Sockect UTP.

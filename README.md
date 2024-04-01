@@ -70,7 +70,8 @@ Apuntes sobre comando en Linux y Powershell.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.
  - ```/etc/resolv.config``` Configurar DNS. Se puedo validar el DNS que utiliza el Sistema con el comando dig. Modificacion Temporal.
  - ```/etc/apt/sources.list``` Archivo de repositorios del sistema.
- - ```/etc/profile```     Archivo que contiene informacion de profile general.
+ - ```/etc/profile```      Permite definir variables de entorno y scripts, aunque no es apropiado modificar este fichero directamente (debe crearse un nuevo fichero en /etc/profile.d). Se ejecuta en shells con login.
+ - ```/etc/bash.bashrc``` Permite definir variables de entorno y scripts que estarán disponibles para programas iniciados desde la shell bash. Las variables que se definan en este fichero no van a estar disponibles para programas iniciados desde la interfaz gráfica. No se ejecuta en shells con login.
  
 ### Variables de Entorno
  -  Mostrar lista de variables de Entorno. ```printenv```.

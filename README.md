@@ -286,6 +286,9 @@ zip -r archivo_comprimido.zip directorio_a_comprimir/
 ```bash
 unzip archivo_comprimido.zip
 ```
+```
+gunzip file.gz
+```
 ### Descomprimir en Directorio
 ```bash
 unzip archivo_comprimido.zip -d /ruta/del/directorio/

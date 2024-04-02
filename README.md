@@ -144,7 +144,7 @@ systemctl list-units --type=service
   ![Image text](Imagenes/Regular_Expressions.png)
 
 - Importante Manejar Expresiones regulares en Notepad++ (```https://www.youtube.com/playlist?list=PL1z4RL0Mc_2UEn-9qHIIT_P1jN0nwde2f```)
-
+- Web para generar y probar expresiones regulares(```https://regex101.com/```)
  ## Comando AWK & GREP
 
  - Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.

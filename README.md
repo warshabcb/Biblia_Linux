@@ -61,6 +61,7 @@ Apuntes sobre comando en Linux y Powershell.
 
 ### Repositorios Github 
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
+- ```https://github.com/zacheller/rockyou.git``` Wordlist Rockyou.
   
 ## Sistema Operativo
 

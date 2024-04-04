@@ -239,6 +239,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
 - ```figlet``` Genera texto con letras grandes en terminal.
 - ```cmatrix```Wallpaper Matrix en Terminal.
 - ```mtr``` Permite realizar un seguimiento de la ruta que toma un paquete de datos desde tu computadora hasta un destino específico en la red, al mismo tiempo que muestra información sobre la latencia y la pérdida de paquetes en cada salto de la red.
+-```sl``` El tren en la terminal ```sudo apt install sl``` podemos crear un alias ```alias sl='/usr/games/sl'``` en ```.bashrc```.
 
 ## Manejo de Entorno Linux
 

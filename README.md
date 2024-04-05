@@ -173,7 +173,7 @@ systemctl list-units --type=service
    awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
    ```
    ![Image text](Imagenes/Length_Awk.png)
- - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador extablecido al inicio con ```-F```.
+ - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```.
    ```
    awk -F':' '{print $NF}' /etc/passwd | sort | uniq
    ```

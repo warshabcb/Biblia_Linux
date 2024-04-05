@@ -62,6 +62,7 @@ Apuntes sobre comando en Linux y Powershell.
 ### Repositorios Github 
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
 - ```https://github.com/zacheller/rockyou.git``` Wordlist Rockyou.
+- ```https://github.com/rebootuser/LinEnum.git``` Validar este repositorio en VM Proxmox.
   
 ## Sistema Operativo
 

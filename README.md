@@ -97,7 +97,7 @@ Apuntes sobre comando en Linux y Powershell.
 systemctl list-units --type=service
 ```
 
-## CronTab
+
 ## Crontab en Linux
 
 Crontab es una herramienta de programación de tareas en Linux que permite ejecutar scripts o comandos en momentos específicos de manera automática. La tabla siguiente resume su sintaxis y opciones:

@@ -176,7 +176,6 @@ systemctl list-units --type=service
  - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador extablecido al inicio con ```-F```.
    ```
    awk -F':' '{print $NF}' /etc/passwd | sort | uniq
-
    ```
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 

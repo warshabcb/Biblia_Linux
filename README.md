@@ -120,6 +120,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 | `-`      | Define un rango de valores (p.ej., `1-5`).                                             |
 | `/`      | Especifica un intervalo de tiempo (p.ej., `*/10` para "cada 10 minutos").              |
 
+
 ### Ejemplos de Crontab
 
 ```cron
@@ -131,7 +132,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 
 # Ejecuta `logs.sh` a las 3 PM los lunes
 0 15 * * 1 /path/to/logs.sh
-
+```
 
 
 ## Buscar | Priorizar | Matar Procesos Sistema

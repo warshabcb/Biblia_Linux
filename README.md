@@ -270,6 +270,20 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 - Web para generar y probar expresiones regulares(```https://regex101.com/```)
  ## Comando AWK & GREP
 
+  ### Variables Incorporadas AWK
+  | Variable | Descripción |
+|----------|-------------|
+| `NR`     | Número de registro actual, típicamente el número de línea procesada hasta el momento. |
+| `NF`     | Número de campos en el registro actual. |
+| `$0`     | Toda la línea de entrada actual. |
+| `$1`, `$2`, ..., `$n` | El primer, segundo, ..., n-ésimo campo de la línea actual, respectivamente. |
+| `FS`     | Separador de campos (Field Separator), espacio en blanco por defecto. |
+| `RS`     | Separador de registros (Record Separator), una nueva línea por defecto. |
+| `OFS`    | Separador de salida de campos (Output Field Separator), utilizado para formatos de salida. |
+| `ORS`    | Separador de salida de registros (Output Record Separator), utilizado en la salida de datos. |
+
+
+
  - Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.
    ```
    zgrep "Mensaje recibido" *.log.gz | awk '{print substr($0,196,21), substr($0, otro_inicio, otro_largo)}'

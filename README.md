@@ -38,7 +38,11 @@ Apuntes sobre comando en Linux y Powershell.
 | Ctrl+Shift+F3   | Buscar la ocurrencia anterior          					          |
 
 
-
+## Configurar SSH con Clave
+- Crear las Claves con el comando en powershell ```ssh-keygen -t rsa -b 2048```.
+- Copiar Clave Privada en path ```C:\Users\Cuenta\.ssh```.
+- Copiar la Clave publica en el Servidor Linux a Controlar en el Archivo ubicado ```.ssh``` con el nombre ```~/.ssh/authorized_keys```.
+- Modifcar el Comando en el json de code ```"commandline": "ssh -i C:\\Users\\Warshab\\.ssh\\NombreFile user@IP"```
 
 
 

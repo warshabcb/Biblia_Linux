@@ -53,6 +53,10 @@ Apuntes sobre comando en Linux y Powershell.
     alias ..='cd ..'
     alias ...='cd ../../'
     alias ....='cd ../../../'
+    alias now='date +"%Y-%m-%d %H:%M:%S"'
+    alias myip='curl http://ipinfo.io/ip;echo'
+    alias countfiles='echo "Numero de Archivos :" && ls -1 | wc -l'
+
   ```
 
 

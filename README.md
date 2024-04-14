@@ -424,7 +424,7 @@ unzip archivo_comprimido.zip -d /ruta/del/directorio/
  - -z: le dice a tar que descomprima el archivo (ya que está comprimido con gzip).
  - -v: significa "verbose", lo que hace que tar muestre los archivos a medida que se extraen (esto es opcional, pero útil para ver lo que está sucediendo).
  - -f: le dice a tar que el siguiente argumento es el nombre del archivo a procesar, en este caso, rockyou.txt.tar.gz.
-```
+```bash
    tar -xzvf rockyou.txt.tar.gz
 ```
 

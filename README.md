@@ -70,6 +70,23 @@ Apuntes sobre comando en Linux y Powershell.
    PS1='\[\e[97;1m\]\u\[\e[97m\]@\[\e[97m\]\h\[\e[0m\]:\[\e[91m\][\[\e[38;5;220m\]\w\[\e[91m\]]\[\e[38;5;35;1m\]-->\[\e[0m\]'
    ```
    
+## Calculos Aritmeticos con Terminal
+
+- Usando ```expr`` Ejemplos.
+  ```bash
+      expr 2 + 3
+      expr 2 - 1
+      expr 2 \* 2
+      expr 10 / 2
+  ```
+- Usando Bash con ```$((expresión))``` Ejemplo.
+  ```bash
+      echo $((2 + 2))
+      echo $((2 - 1))
+      echo $((2 * 2))
+      echo $((10 / 2))
+  ```
+
 
 ## Eliminar Mensajes Bienvenida al Conectar x SSH
 - Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.

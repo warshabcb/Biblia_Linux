@@ -54,6 +54,10 @@ Apuntes sobre comando en Linux y Powershell.
    ```
    
 
+## Eliminar Mensajes Bienvenida al Conectar x SSH
+- Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.
+- Eliminar los archivos del Directorio ```/etc/update-motd.d/*``` por lo general solo hay uno con el comando ```uname -r```.
+
 ## Paquetes en Linux
 - Buscar Paquetes ```sudo apt search openssh-server```.
 - Otra forma de buscar paquetes ```dpkg -s top```.

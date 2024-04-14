@@ -86,7 +86,7 @@ Apuntes sobre comando en Linux y Powershell.
 
 
 ### Repositorio Kali en Debian
- 
+
 - Url Repo Kali (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
    ![Image text](Imagenes/Repo_Kali.png)
 
@@ -355,7 +355,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
 - ```figlet``` Genera texto con letras grandes en terminal.
 - ```cmatrix```Wallpaper Matrix en Terminal.
 - ```mtr``` Permite realizar un seguimiento de la ruta que toma un paquete de datos desde tu computadora hasta un destino específico en la red, al mismo tiempo que muestra información sobre la latencia y la pérdida de paquetes en cada salto de la red.
--```sl``` El tren en la terminal ```sudo apt install sl``` podemos crear un alias ```alias sl='/usr/games/sl'``` en ```.bashrc```.
+- ```sl``` El tren en la terminal ```sudo apt install sl``` podemos crear un alias ```alias sl='/usr/games/sl'``` en ```.bashrc```.
 
 ## Manejo de Entorno Linux
 
@@ -425,7 +425,7 @@ unzip archivo_comprimido.zip -d /ruta/del/directorio/
  - -v: significa "verbose", lo que hace que tar muestre los archivos a medida que se extraen (esto es opcional, pero útil para ver lo que está sucediendo).
  - -f: le dice a tar que el siguiente argumento es el nombre del archivo a procesar, en este caso, rockyou.txt.tar.gz.
 ```
-tar -xzvf rockyou.txt.tar.gz
+   tar -xzvf rockyou.txt.tar.gz
 ```
 
 

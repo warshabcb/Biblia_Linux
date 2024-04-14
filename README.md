@@ -2,6 +2,47 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
+
+## HotKeys Windows Terminal
+
+| Atajo           | Descripción                            					          |
+|-----------------|-----------------------------------------------------------|
+| Ctrl+C          | Copiar                                 					          |
+| Ctrl+V          | Pegar                                  					          |
+| Ctrl+A          | Seleccionar todo                       					          |
+| Ctrl+Shift+V    | Pegar sin formato                      					          |
+| Ctrl+Shift+C    | Copiar texto seleccionado al portapapeles (como Ctrl+C)   |
+| Ctrl+Shift+X    | Cortar texto seleccionado              					          |
+| Ctrl+T          | Abrir una nueva pestaña                					          |
+| Ctrl+Tab        | Cambiar a la pestaña siguiente         					          |
+| Ctrl+Shift+Tab  | Cambiar a la pestaña anterior          					          |
+| Ctrl+Shift+T    | Reabrir pestaña cerrada                					          |
+| Ctrl+W          | Cerrar la pestaña actual               					          |
+| Ctrl+K          | Cortar texto seleccionado              					          |
+| Ctrl+F          | Buscar                                 					          |
+| Ctrl+Shift+F    | Buscar en todas las pestañas           					          |
+| Ctrl+Plus       | Aumentar el tamaño de la fuente        					          |
+| Ctrl+Minus      | Disminuir el tamaño de la fuente       					          |
+| Ctrl+0          | Restablecer el tamaño de la fuente     					          | 
+| Ctrl+Shift+Plus | Aumentar el zoom                       					          |
+| Ctrl+Shift+Minus| Disminuir el zoom                      					          |
+| Ctrl+L          | Limpiar la pantalla                    					          |
+| Alt+Enter       | Alternar pantalla completa             					          |
+| Alt+D           | Mover el cursor al campo de entrada    					          |
+| Ctrl+Shift+V    | Pegar desde el portapapeles            					          |
+| Ctrl+Shift+D    | Dividir la terminal en una nueva pestaña vertical 		    |
+| Ctrl+Shift+-    | Dividir la terminal en una nueva pestaña horizontal 	    |
+| Alt+Shift+D     | Dividir la terminal en una nueva pestaña vertical 		    |
+| Alt+Shift+-     | Dividir la terminal en una nueva pestaña horizontal 	    |
+| Ctrl+F3         | Buscar la siguiente ocurrencia         					          |
+| Ctrl+Shift+F3   | Buscar la ocurrencia anterior          					          |
+
+
+
+
+
+
+
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
   
@@ -219,6 +260,12 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
    awk -F':' '{print $NF}' /etc/passwd | sort | uniq
    ```
 
+## Practicas Comandos
+
+ -
+
+
+
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 
 Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding.```
@@ -234,6 +281,8 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
   sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
+  sudo apt install bsdmainutils
+
   ```
   Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
   ```

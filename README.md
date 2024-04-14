@@ -55,7 +55,7 @@ Apuntes sobre comando en Linux y Powershell.
     alias ....='cd ../../../'
     alias now='date +"%Y-%m-%d %H:%M:%S"'
     alias myip='curl http://ipinfo.io/ip;echo'
-    alias countfiles='echo "Numero de Archivos :" && ls -1 | wc -l'
+    alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
 
   ```
 
@@ -85,7 +85,8 @@ Apuntes sobre comando en Linux y Powershell.
 - Actualizar Kernel ```sudo apt dist-upgrade``` que equivale a un ```sudo apt upgrade```.
 
 
-### Repositorio Kali en Debian 
+### Repositorio Kali en Debian
+ 
 - Url Repo Kali (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
    ![Image text](Imagenes/Repo_Kali.png)
 

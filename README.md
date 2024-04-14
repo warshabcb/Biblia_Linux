@@ -31,7 +31,6 @@ Apuntes sobre comando en Linux y Powershell.
 | Alt+D           | Mover el cursor al campo de entrada    					          |
 | Ctrl+Shift+V    | Pegar desde el portapapeles            					          |
 | Ctrl+Shift+D    | Dividir la terminal en una nueva pestaña vertical 		    |
-| Ctrl+Shift+-    | Dividir la terminal en una nueva pestaña horizontal 	    |
 | Alt+Shift+D     | Dividir la terminal en una nueva pestaña vertical 		    |
 | Alt+Shift+-     | Dividir la terminal en una nueva pestaña horizontal 	    |
 | Ctrl+F3         | Buscar la siguiente ocurrencia         					          |
@@ -44,7 +43,17 @@ Apuntes sobre comando en Linux y Powershell.
 - Copiar la Clave publica en el Servidor Linux a Controlar en el Archivo ubicado ```.ssh``` con el nombre ```~/.ssh/authorized_keys```.
 - Modifcar el Comando en el json de code ```"commandline": "ssh -i C:\\Users\\Warshab\\.ssh\\NombreFile user@IP"```
 
-
+## Configuraciones .Bashrc
+- Alias Utiles.
+  ```bash
+    alias cl='clear'
+    alias update='sudo apt update && sudo apt upgrade -y'
+    alias sl='/usr/games/sl'
+    alias meminfo='cat /proc/meminfo | grep MemTotal'
+    alias ..='cd ..'
+    alias ...='cd ../../'
+    alias ....='cd ../../../'
+  ```
 
 
 ## $ _ Bash Prompt Generator

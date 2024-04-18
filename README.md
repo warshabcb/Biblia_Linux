@@ -317,7 +317,11 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
    ```
    ![Image text](Imagenes/Consulta_AWK_$4.png)
 
- 
+ - Para casos en los que se necesita tener un mensaje cuando no se encuentre resultados con el ```grep``` o ```zgrep``` podemos usar el siguiente comando:
+    ```bash
+    grep "Mensaje" *.log || echo "No se encontraron Datos."
+
+    ```
 
  
 

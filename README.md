@@ -246,10 +246,12 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
   taskset --cpu-list 1 ./infinito.sh &
   ```
 - Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad
+  -- Nice
   ```bash
   taskset --cpu-list 1 nice -n 10 ./infinito.sh &  
   ```
-  ```bash  Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
+  -- Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
+  ```bash  
    renice 10 -p #proceso    
   ```
   ![Image text](Imagenes/CPU_Renice.png)

@@ -268,7 +268,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 
 - Importante Manejar Expresiones regulares en Notepad++ (```https://www.youtube.com/playlist?list=PL1z4RL0Mc_2UEn-9qHIIT_P1jN0nwde2f```)
 - Web para generar y probar expresiones regulares(```https://regex101.com/```)
- ## Comando AWK & GREP
+ ## Comando AWK 
 
   ### Variables Incorporadas AWK
   | Variable | Descripción |
@@ -283,35 +283,43 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 | `ORS`    | Separador de salida de registros (Output Record Separator), utilizado en la salida de datos. |
 
 
+  ### Ejemplos
+
+  - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100 (```$4<=100```). Este Comando  ```%-20s``` Indica que Genere un espacio para la primer columna de 20  y el ```\n``` es el Salto de linea.
+   ```
+   awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt
+   ```
+  - Para los casos en que se desea sumar una columna podemos usar el siguiente Comando:
+   ```
+   awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
+   ```
+   ![Image text](Imagenes/Suma_Awk.png)
+  - Para los casos en que se desea Contar una columna podemos usar el siguiente Comando:
+   ```
+   awk -F, '{ count++ } END {print "La cuenta es de : " count}' fake_data.txt
+   ```
+   ![Image text](Imagenes/Contar_Awk.png)
+   - Para saber el tamaño de una columna usar el Comando:
+   ```
+   awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
+   ```
+   ![Image text](Imagenes/Length_Awk.png)
+   - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```.
+   ```
+   awk -F':' '{print $NF}' /etc/passwd | sort | uniq
+   ```
+
+## Comando Grep $ zgrep
 
  - Buscar una cadena y seleccionar las posiciones que se necesitan devolver de esa fila.
    ```
    zgrep "Mensaje recibido" *.log.gz | awk '{print substr($0,196,21), substr($0, otro_inicio, otro_largo)}'
    ```
- - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100 (```$4<=100```). Este Comando  ```%-20s``` Indica que Genere un espacio para la primer columna de 20  y el ```\n``` es el Salto de linea.
-   ```
-   awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt
-   ```
    ![Image text](Imagenes/Consulta_AWK_$4.png)
- - Para los casos en que se desea sumar una columna podemos usar el siguiente Comando:
-   ```
-   awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
-   ```
-   ![Image text](Imagenes/Suma_Awk.png)
- - Para los casos en que se desea Contar una columna podemos usar el siguiente Comando:
-   ```
-   awk -F, '{ count++ } END {print "La cuenta es de : " count}' fake_data.txt
-   ```
-   ![Image text](Imagenes/Contar_Awk.png)
- - Para saber el tamaño de una columna usar el Comando:
-   ```
-   awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
-   ```
-   ![Image text](Imagenes/Length_Awk.png)
- - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```.
-   ```
-   awk -F':' '{print $NF}' /etc/passwd | sort | uniq
-   ```
+
+ 
+
+ 
 
 ## Practicas Comandos
 

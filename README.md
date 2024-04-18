@@ -72,7 +72,7 @@ Apuntes sobre comando en Linux y Powershell.
    
 ## Calculos Aritmeticos con Terminal
 
-- Usando ```expr`` Ejemplos.
+- Usando ```expr``` Ejemplos.
   ```bash
       expr 2 + 3
       expr 2 - 1
@@ -245,7 +245,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
   ```bash
   taskset --cpu-list 1 ./infinito.sh &
   ```
-- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad
+- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad.
   -- Nice
   ```bash
   taskset --cpu-list 1 nice -n 10 ./infinito.sh &  

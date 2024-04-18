@@ -286,26 +286,26 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
   ### Ejemplos
 
   - Buscar datos basados en la columna # 4, donde esta sea menor igual a 100 (```$4<=100```). Este Comando  ```%-20s``` Indica que Genere un espacio para la primer columna de 20  y el ```\n``` es el Salto de linea.
-   ```
+   ```bash
    awk -F, '$4<=100 {printf "%-30s %-5s\n", $1,$3}' fake_data.txt
    ```
   - Para los casos en que se desea sumar una columna podemos usar el siguiente Comando:
-   ```
+   ```bash
    awk -F, '{ suma += $4 } END {print "La Suma es de : " suma}' fake_data.txt
    ```
    ![Image text](Imagenes/Suma_Awk.png)
   - Para los casos en que se desea Contar una columna podemos usar el siguiente Comando:
-   ```
+   ```bash
    awk -F, '{ count++ } END {print "La cuenta es de : " count}' fake_data.txt
    ```
    ![Image text](Imagenes/Contar_Awk.png)
    - Para saber el tamaño de una columna usar el Comando:
-   ```
+   ```bash
    awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
    ```
    ![Image text](Imagenes/Length_Awk.png)
    - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```.
-   ```
+   ```bash
    awk -F':' '{print $NF}' /etc/passwd | sort | uniq
    ```
 

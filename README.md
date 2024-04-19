@@ -324,6 +324,11 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
     grep "Mensaje" *.log || echo "No se encontraron Datos."
 
     ```
+ - Ordenar Lista de Numero y Saber cuales estan repetidos
+    ```bash
+    cat numeros.txt | sort | uniq -c | awk ' $1 > 1'
+    ```
+    ![Image text](Imagenes/OrdenaNumeros.png)
 
  
 

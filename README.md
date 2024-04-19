@@ -307,7 +307,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
    awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
    ```
    ![Image text](Imagenes/Length_Awk.png)
-   
+
    - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```
 
    ```bash
@@ -318,8 +318,8 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
    ```bash
    cat numeros.txt | sort | uniq -c | awk ' $1 > 1'
    ```
-    ![Image text](Imagenes/OrdenaNumeros.png)
-    ![Image text](Imagenes/OrdenaNumerosv2.png)
+   ![Image text](Imagenes/OrdenaNumeros.png)
+   ![Image text](Imagenes/OrdenaNumerosv2.png)
 
 ## Comando Grep $ zgrep
 

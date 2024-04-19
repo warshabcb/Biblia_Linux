@@ -329,6 +329,7 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
     cat numeros.txt | sort | uniq -c | awk ' $1 > 1'
     ```
     ![Image text](Imagenes/OrdenaNumeros.png)
+    ![Image text](Imagenes/OrdenaNumerosv2.png)
 
  
 

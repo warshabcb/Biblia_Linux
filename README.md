@@ -302,16 +302,19 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
    ```
    ![Image text](Imagenes/Contar_Awk.png)
    - Para saber el tamaño de una columna usar el Comando:
+
    ```bash
    awk -F, '{print $1, "La Colunma $1 tiene una logitud de :", length($1) }' fake_data.txt | head -2
    ```
    ![Image text](Imagenes/Length_Awk.png)
+   
    - Buscar las shell disponibles diferentes del archivo passwd ```$NF```  Significa Ultima Columna o ultimo campo de Linea segun el delimitador establecido al inicio con ```-F```
 
-  ```bash
-  awk -F':' '{print $NF}' /etc/passwd | sort | uniq
-  ```
-   - Ordenar Lista de Numero y Saber cuales estan repetidos
+   ```bash
+   awk -F':' '{print $NF}' /etc/passwd | sort | uniq
+   ```
+   - Ordenar Lista de Numero y Saber cuales estan repetidos.
+
    ```bash
    cat numeros.txt | sort | uniq -c | awk ' $1 > 1'
    ```

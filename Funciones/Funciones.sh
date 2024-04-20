@@ -77,3 +77,33 @@ chg2820() {
         done < "$archivo"
     fi
 }
+
+fixnums() {
+    for arg in "$@"; do
+        # Verifica si el argumento es un nombre de archivo existente
+        if [ -f "$arg" ]; then
+            # Si es un archivo, procesa su contenido
+            while IFS= read -r line; do
+                # Llama a la lógica de procesamiento directamente aquí
+                echo "$line" | {
+                    while IFS= read -r line; do
+                        # Elimina espacios y comas de mil, y convierte la coma decimal a punto si es necesario
+                        local clean_number=$(echo "$line" | sed -r 's/ //g' | sed -r ':a;s/^([^,]*),([0-9]{3}(\.|,|$))/\1\2/;ta' | sed -r 's/,([0-9]{2})$/.\1/')
+                        # Corrige números que terminan con '.00' para convertirlos en enteros completos
+                        echo "$clean_number" | sed 's/\.00$//'
+                    done
+                }
+            done < "$arg"
+        else
+            # Si no es un archivo, asume que es un valor directo y procesalo
+            echo "$arg" | {
+                while IFS= read -r line; do
+                    # Elimina espacios y comas de mil, y convierte la coma decimal a punto si es necesario
+                    local clean_number=$(echo "$line" | sed -r 's/ //g' | sed -r ':a;s/^([^,]*),([0-9]{3}(\.|,|$))/\1\2/;ta' | sed -r 's/,([0-9]{2})$/.\1/')
+                    # Corrige números que terminan con '.00' para convertirlos en enteros completos
+                    echo "$clean_number" | sed 's/\.00$//'
+                done
+            }
+        fi
+    done
+}

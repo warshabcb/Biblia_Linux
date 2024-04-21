@@ -541,23 +541,31 @@ Cambia los siguientes valores:
 
 ## Python
 
-### Paquete para Crear Enviroment
+## Instalar Python
+```bash
+sudo apt install python3 python3-pip
+
 ```
+
+### Paquete para Crear Enviroment
+```bash
 sudo apt install python3-venv
 ```
 ### Crea Entorno 
-```
+```bash
 python3 -m venv mi_entorno
 
 ```
 ### Activar Entorno
-```
+```bash
 source mi_entorno/bin/activate
 
 ```
 ### Instalar Librerias
-```
+```bash
 pip install matplotlib seaborn
+pip install tensorflow
+pip install tensorflow-gpu
 
 ```
 

@@ -55,7 +55,6 @@ Apuntes sobre comando en Linux y Powershell.
     alias now='date +"%Y-%m-%d %H:%M:%S"'
     alias myip='curl http://ipinfo.io/ip;echo'
     alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
-
   ```
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
@@ -107,26 +106,26 @@ Apuntes sobre comando en Linux y Powershell.
   deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
   ```
 - Se recomienda agregar el repositorio en esta ruta ```/etc/apt/sources.list.d/``` y no en el fichero ```/etc/apt/sources.list```. Se puede hacer con el siguiente comando.
-  ```
+  ```bash
    sudo add-apt-repository "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware"
   ```
 
 - Se puede desscargar la clave publica GPG de Kali con el siguiente comando.
-  ```
+  ```bash
   wget  https://archive.kali.org/archive-key.asc 
   ```
 - Para convertir el archivo ```archive-key.as```  a un archivo ```.gpg``` se realiza con el siguiente comando.
-  ```
+  ```bash
   gpg -o kali-key.gpg --dearmor archive-key.asc
   ```
 - Ahora podemos copiar el archivo en la ruta : ```/etc/apt/keyrings/```
-  ```
+  ```bash
   cp kali-key.gpg /etc/apt/keyrings/
   ```
 - Ahora ya podemos modificar el archivo generado en ```/etc/apt/sources.list.d/``` Archivo ```archive_uri-http_http_kali_org_kali-bookworm.list```.
 
 - Ahora Modificamos el archivo con la siguiente Linea
-  ```
+  ```bash
   deb [signed-by=/etc/apt/keyrings/kali-key.gpg] http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
   ```
 - Ahora ya podemos ejecutar el update.
@@ -134,7 +133,7 @@ Apuntes sobre comando en Linux y Powershell.
   ```sudo apt update && sudo apt upgrade -y```  or ```sudo apt full-upgrade```
 
 - Instala las herramientas de Kali.
-  ```
+  ```bash
   sudo apt install kali-linux-default
   ```
 

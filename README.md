@@ -69,6 +69,7 @@ Apuntes sobre comando en Linux y Powershell.
 ## Calculos Aritmeticos con Terminal
 
 - Usando ```expr``` Ejemplos.
+
   ```bash
       expr 2 + 3
       expr 2 - 1
@@ -76,6 +77,7 @@ Apuntes sobre comando en Linux y Powershell.
       expr 10 / 2
   ```
 - Usando Bash con ```$((expresión))``` Ejemplo.
+
   ```bash
       echo $((2 + 2))
       echo $((2 - 1))

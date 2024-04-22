@@ -2,7 +2,6 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
-
 ## HotKeys Windows Terminal
 
 | Atajo           | Descripción                            					          |
@@ -58,8 +57,6 @@ Apuntes sobre comando en Linux y Powershell.
     alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
 
   ```
-
-
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
   
@@ -86,7 +83,6 @@ Apuntes sobre comando en Linux y Powershell.
       echo $((2 * 2))
       echo $((10 / 2))
   ```
-
 
 ## Eliminar Mensajes Bienvenida al Conectar x SSH
 - Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.
@@ -179,7 +175,6 @@ Apuntes sobre comando en Linux y Powershell.
 ```
 systemctl list-units --type=service
 ```
-
 
 ## Crontab en Linux  ```crontab -e```
 
@@ -341,8 +336,6 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 ## Practicas Comandos
 
  -
-
-
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 

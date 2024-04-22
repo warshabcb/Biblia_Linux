@@ -138,7 +138,6 @@ Apuntes sobre comando en Linux y Powershell.
   ```bash
   sudo apt install kali-linux-default
   ```
-
 ### Repositorios Github 
 - ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
 - ```https://github.com/zacheller/rockyou.git``` Wordlist Rockyou.
@@ -147,6 +146,7 @@ Apuntes sobre comando en Linux y Powershell.
 ## Sistema Operativo
 
 ### Directorios Importantes
+
  - ```/etc/password```    Contiene la informacion de Usuarios.
  - ```/etc/shadow```      Contiene la informacion de contraseñas de los usuarios.
  - ```/etc/group```       Contiene la informacion de grupos y sus usuarios.

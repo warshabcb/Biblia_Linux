@@ -349,6 +349,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common
   sudo apt install build-essential
+  sudo apt update && sudo apt install nvidia-driver
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis

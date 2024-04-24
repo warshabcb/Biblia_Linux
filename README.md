@@ -55,6 +55,7 @@ Apuntes sobre comando en Linux y Powershell.
     alias now='date +"%Y-%m-%d %H:%M:%S"'
     alias myip='curl http://ipinfo.io/ip;echo'
     alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
+    alias gogo='source ~/.bashrc'
   ```
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```

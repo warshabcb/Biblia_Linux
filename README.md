@@ -349,6 +349,8 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common
   sudo apt install build-essential
+  sudo apt update
+  sudo apt install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
@@ -533,14 +535,13 @@ Cambia los siguientes valores:
 `max_execution_time` y `max_input_time` : Estos valores controlan el tiempo máximo que PHP espera para la ejecución de scripts y la entrada de datos, respectivamente. Puedes aumentarlos según sea necesario.
 
 
-## Python
+## Python AI
 
 ## Instalar Python
 ```bash
 sudo apt install python3 python3-pip
 
 ```
-
 ### Paquete para Crear Enviroment
 ```bash
 sudo apt install python3-venv

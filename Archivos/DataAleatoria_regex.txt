@@ -1,0 +1,41 @@
+import random
+import string
+
+# Function to generate a random date in DD/MM/YYYY format
+def generate_date():
+    day = random.randint(1, 28)  # To avoid invalid dates, we limit days to 28
+    month = random.randint(1, 12)
+    year = random.randint(1985, 2023)
+    return f"{day:02}/{month:02}/{year}"
+
+# Function to generate a random IP address
+def generate_ip():
+    return '.'.join(str(random.randint(0, 255)) for _ in range(4))
+
+# Function to generate a random hexadecimal color code
+def generate_hex_color():
+    return '#' + ''.join(random.choices('0123456789ABCDEF', k=6))
+
+# Function to generate a random email address
+def generate_email():
+    domains = ["example.com", "mail.com", "test.org", "fake.net","gmail.com","hotmail.com"]
+    name = ''.join(random.choices(string.ascii_lowercase, k=5))
+    return f"{name}@{random.choice(domains)}"
+
+# Generate a random log entry with various data types
+def generate_log_entry():
+    return f"{generate_date()} - {generate_ip()} - {generate_hex_color()} - {generate_email()}\n"
+
+# Generate multiple log entries and save to a text file
+def generate_log_file(num_entries, file_path):
+    with open(file_path, 'w') as file:
+        for _ in range(num_entries):
+            file.write(generate_log_entry())
+
+# Path to save the file
+file_path = '/root/regex_data.txt'
+
+# Generate a file with 10000 random log entries
+generate_log_file(10000, file_path)
+
+file_path

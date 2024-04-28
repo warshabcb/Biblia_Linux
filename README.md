@@ -346,6 +346,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
 - Instalar estos paquetes necesarios primero:
   ```
   sudo apt-get install linux-headers-$(uname -r)
+  sudo apt install firmware-linux firmware-linux-nonfree
   sudo apt-get update
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common

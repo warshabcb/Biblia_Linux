@@ -1,3 +1,49 @@
+#DB769F641066078106a801f00Aa20316A0
+bitmap() 
+{
+  local input="$1"
+  local bin=""
+  local bitmap=""
+
+  # Verifica si el input es un archivo
+  if [[ -f "$input" ]]; then
+    # Lee el contenido del archivo, asumiendo que el bitmap es la primera líne
+    bitmap=$(head -n 1 "$input")
+  else
+    # Asume que el input es el bitmap como una cadena
+    bitmap="$input"
+  fi
+
+  # Limpia el bitmap de corchetes si los tiene
+  bitmap="${bitmap//[\[\]]/}"
+
+  # Convierte el bitmap de hexadecimal a binario
+  for (( i=0; i<${#bitmap}; i++ )); do
+    case "${bitmap:$i:1}" in
+      0) bin+="0000" ;;
+      1) bin+="0001" ;;
+      2) bin+="0010" ;;
+      3) bin+="0011" ;;
+      4) bin+="0100" ;;
+      5) bin+="0101" ;;
+      6) bin+="0110" ;;
+      7) bin+="0111" ;;
+      8) bin+="1000" ;;
+      9) bin+="1001" ;;
+      A|a) bin+="1010" ;;
+      B|b) bin+="1011" ;;
+      C|c) bin+="1100" ;;
+      D|d) bin+="1101" ;;
+      E|e) bin+="1110" ;;
+      F|f) bin+="1111" ;;
+      *) echo "Error: Invalid hex digit '${bitmap:$i:1}'" >&2; return 1 ;;
+    esac
+  done
+  echo "$bin"
+}
+
+
+
 myips()
 {
     if command -v curl > /dev/null; then

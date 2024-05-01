@@ -55,6 +55,7 @@ Apuntes sobre comando en Linux y Powershell.
     alias now='date +"%Y-%m-%d %H:%M:%S"'
     alias myip='curl http://ipinfo.io/ip;echo'
     alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
+    alias gogo='source ~/.bashrc'
   ```
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
@@ -345,12 +346,18 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
 - Instalar estos paquetes necesarios primero:
   ```
   sudo apt-get install linux-headers-$(uname -r)
+  sudo apt install firmware-linux firmware-linux-nonfree
   sudo apt-get update
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common
   sudo apt install build-essential
+<<<<<<< HEAD
   sudo apt update
   sudo apt install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
+=======
+  sudo apt install debconf
+  sudo apt update && sudo apt install nvidia-driver
+>>>>>>> 525512ca4b6735316be9a87323a9fc5e89630826
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis

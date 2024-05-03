@@ -138,15 +138,20 @@ expr 2 \* 2      # Multiplicación: retorna 4 (el asterisco está escapado)
 expr 10 / 2      # División: retorna 5
 ```
 
- 
-- Usando Bash con ```$((expresión))``` Ejemplo.
+## Usando Aritmética de Bash con $((expresión))
 
-  ```bash
-      echo $((2 + 2))
-      echo $((2 - 1))
-      echo $((2 * 2))
-      echo $((10 / 2))
-  ```
+Bash permite realizar aritmética directamente dentro de su sintaxis usando $((expresión)). Es más flexible y fácil de usar para cálculos integrados en scripts, dado que no requiere espaciado especial o escape de caracteres.
+
+**Ejemplos:**
+```bash
+echo $((2 + 2))   # Suma: imprime 4
+echo $((2 - 1))   # Resta: imprime 1
+echo $((2 * 2))   # Multiplicación: imprime 4
+echo $((10 / 2))  # División: imprime 5
+```
+
+
+
 
 ## Eliminar Mensajes Bienvenida al Conectar x SSH
 - Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.

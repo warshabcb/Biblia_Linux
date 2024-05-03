@@ -170,9 +170,17 @@ Cuando te conectas a un sistema a través de SSH, es común recibir un mensaje d
 - Editar el archivo MOTD:
   Para cambiar el mensaje de bienvenida, edita el archivo /etc/motd en tu servidor. Puedes escribir el mensaje que desees que se muestre al conectarte vía SSH.
   ```bash
-  sudo nano /etc/motd
+    sudo nano /etc/motd
   ```
   Aquí, puedes insertar el texto que desees que aparezca como mensaje de bienvenida.
+### Eliminar los Mensajes de Bienvenida
+
+- Identificar los scripts de actualización del MOTD:
+  Los mensajes dinámicos son generados por scripts en el directorio /etc/update-motd.d/. Para ver qué scripts están activos:
+  ```bash
+    ls /etc/update-motd.d/
+  ```
+
 
 ## Eliminar Mensajes Bienvenida al Conectar x SSH
 - Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.

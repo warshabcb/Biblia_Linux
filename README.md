@@ -280,8 +280,6 @@ Para añadir el repositorio de Kali en sistemas Debian, sigue los pasos detallad
     ```
 Sigue estos pasos para integrar correctamente el repositorio de Kali Linux en tu sistema Debian.
 
-
-
 ### Repositorios GitHub
 
 En esta sección, encontrarás enlaces directos a varios repositorios de GitHub que pueden ser útiles para diversas tareas de seguridad informática y pruebas de penetración:
@@ -299,7 +297,7 @@ En esta sección, encontrarás enlaces directos a varios repositorios de GitHub 
   - **URL**: [LinEnum en GitHub](https://github.com/rebootuser/LinEnum.git)
 
 ## Sistema Operativo
-=====================
+-----------------------
 
 ### Directorios Importantes
 
@@ -344,6 +342,45 @@ login. Las variables afectan a todos los programas ejecutados desde el escritori
 systemctl list-units --type=service
 ```
 
+## Crontab en Linux
+=====================
+
+### Sintaxis y Opciones
+```markdown
+crontab -e
+```
+Crontab es una herramienta de programación de tareas en Linux que permite ejecutar scripts o comandos en momentos específicos de manera automática. A continuación, se presenta la sintaxis y opciones de
+crontab:
+
+**Tabla de Sintaxis**
+
+| Campo              | Valor                   | Descripción                                           |
+|-------------------|------------------------|------------------------------------------------------|
+| Minuto             | `0-59`                  | El minuto en el que se ejecutará la tarea.            |
+| Hora               | `0-23`                  | La hora en la que se ejecutará la tarea.              |
+| Día del mes        | `1-31`                  | El día del mes en el que se ejecutará la tarea.       |
+| Mes                | `1-12` o `Jan-Dec`      | El mes en el que se ejecutará la tarea.               |
+| Día de la semana   | `0-7` o `Sun- Sat`       | El día de la semana en el que se ejecutará la tarea.  |
+| Comando            | `/path/to/command`      | El comando o script que se ejecutará.                 |
+
+### Caracteres Especiales
+
+Las siguientes son algunas de las características especiales que puedes utilizar en crontab:
+
+| Carácter  | Descripción                                                                             |
+|----------|----------------------------------------------------------------------------------------|
+| `*`       | Representa "cada" unidad de tiempo (cada hora, cada día, etc.).                         |
+| `,`       | Permite especificar una lista de valores (p. ej., `1,3,5`).                              |
+| `-`       | Define un rango de valores (p. ej., `1-5`).                                              |
+| `/`       | Especifica un intervalo de tiempo (p. ej., `*/10` para "cada 10 minutos").               |
+
+
+
+
+
+
+
+---
 ## Crontab en Linux  ```crontab -e```
 
 Crontab es una herramienta de programación de tareas en Linux que permite ejecutar scripts o comandos en momentos específicos de manera automática. La tabla siguiente resume su sintaxis y opciones:

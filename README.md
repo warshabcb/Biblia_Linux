@@ -343,6 +343,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
 - Crear un archivo de configuración para el kernel.
 - Instalar estos paquetes necesarios primero.
   ```
+  #Requeridos
   sudo apt-get install linux-headers-$(uname -r)
   sudo apt install firmware-linux firmware-linux-nonfree
   sudo apt-get update
@@ -356,6 +357,7 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
 
+  #Aplicaciones
   sudo apt install bsdmainutils
   sudo apt install lm-sensors
   sudo apt install psensor

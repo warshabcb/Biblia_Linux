@@ -108,7 +108,6 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias now='date +"%Y-%m-%d %H:%M:%S"'
 alias myip='curl http://ipinfo.io/ip;echo'
-alias count='echo "Número de archivos:" && ls -1 | wc -l'
 alias gogo='source ~/.bashrc'
 ```
 

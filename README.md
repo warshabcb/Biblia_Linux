@@ -150,7 +150,16 @@ echo $((2 - 1))   # Resta: imprime 1
 echo $((2 * 2))   # Multiplicación: imprime 4
 echo $((10 / 2))  # División: imprime 5
 ```
+## Operadores Comunes en Bash
+Aquí está una tabla rápida de operadores comunes utilizados en Bash para referencia rápida.
 
+| Operador | Descripción    |
+|----------|----------------|
+| `+`      | Suma           |
+| `-`      | Resta          |
+| `\*`      | Multiplicación |
+| `/`      | División       |
+| `%`      | Módulo         |
 
 
 

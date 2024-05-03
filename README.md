@@ -333,8 +333,6 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
     ```
  
 
- 
-
 ## Practicas Comandos
 
  -
@@ -342,8 +340,8 @@ Crontab es una herramienta de programación de tareas en Linux que permite ejecu
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 
 Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by your system.  This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding.```
-- Crear un archivo de configuración para el kernel:
-- Instalar estos paquetes necesarios primero:
+- Crear un archivo de configuración para el kernel.
+- Instalar estos paquetes necesarios primero.
   ```
   sudo apt-get install linux-headers-$(uname -r)
   sudo apt install firmware-linux firmware-linux-nonfree

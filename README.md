@@ -374,6 +374,25 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 | `-`       | Define un rango de valores (p. ej., `1-5`).                                              |
 | `/`       | Especifica un intervalo de tiempo (p. ej., `*/10` para "cada 10 minutos").               |
 
+
+**Ejemplos de Crontab**
+
+| **Tarea** | **Hora** | **Día de la semana** | **Comando** |
+| --- | --- | --- | --- |
+| Ejecutar `backup. sh` | 2:30 AM | Todos los días | `/path/to/backup.sh` |
+| Ejecutar un script cada 15 minutos | */15 * * * | Todos los días | `/path/to/script.sh` |
+| Ejecutar `logs. sh` | 3 PM | Lunes | `/path/to/logs.sh` |
+| Limpiar log a las 4:30 AM | 30 4 * * | Todos los días | `rm -f /var/log/myapp.log` |
+| Ejecutar `update. sh` | 2:15 AM | Viernes | `/path/to/update.sh` |
+| Enviar correo electrónico a las 9 PM | 0 21 * * | Todos los días | `/path/to/send-email.sh` |
+| Ejecutar `compress. sh` | 1:45 AM | Martes y jueves | `/path/to/compress.sh` |
+| Actualizar base de datos a las 3:30 AM | 30 3 1-28/3 * | Todos los días (tanto tercero día del mes) | `/path/to/update-db.sh` |
+
+
+
+
+
+
 ## Ejemplos de Crontab
  
 ### Ejecuta `backup.sh` a las 2:30 AM todos los días

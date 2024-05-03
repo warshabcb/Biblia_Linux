@@ -230,6 +230,64 @@ sudo apt dist-upgrade
 
 ### Repositorio Kali en Debian
 
+Para añadir el repositorio de Kali en sistemas Debian, sigue los pasos detallados a continuación:
+
+- **URL del Repositorio de Kali:**
+  - Visita la [documentación oficial de Kali Linux](https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/).
+  - ![Descripción de la imagen del repositorio Kali](Imagenes/Repo_Kali.png)
+
+- **Configuración del Repositorio:**
+  - Es recomendable agregar el repositorio en el directorio `/etc/apt/sources.list.d/` y no directamente en el archivo `/etc/apt/sources.list` para mantener las configuraciones organizadas y evitar conflictos. Usa el siguiente comando:
+    ```bash
+    sudo add-apt-repository "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware"
+    ```
+
+- **Importación de la Clave Pública GPG de Kali:**
+  - Descarga la clave con:
+    ```bash
+    wget https://archive.kali.org/archive-key.asc
+    ```
+  - Convierte el archivo de clave a formato `.gpg`:
+    ```bash
+    gpg -o kali-key.gpg --dearmor archive-key.asc
+    ```
+  - Copia la clave al directorio adecuado:
+    ```bash
+    cp kali-key.gpg /etc/apt/keyrings/
+    ```
+
+- **Modificación del Archivo de Fuentes de APT:**
+  - Modifica el archivo creado en `/etc/apt/sources.list.d/` (nombre del archivo: `archive_uri-http_http_kali_org_kali-bookworm.list`) con la línea:
+    ```bash
+    deb [signed-by=/etc/apt/keyrings/kali-key.gpg] http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware
+    ```
+
+- **Actualización del Sistema:**
+  - Actualiza los paquetes con:
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+  - O puedes optar por una actualización completa con:
+    ```bash
+    sudo apt full-upgrade
+    ```
+
+- **Instalación de Herramientas de Kali:**
+  - Instala el paquete por defecto de Kali Linux:
+    ```bash
+    sudo apt install kali-linux-default
+    ```
+
+Sigue estos pasos para integrar correctamente el repositorio de Kali Linux en tu sistema Debian.
+
+
+
+
+
+---------
+
+### Repositorio Kali en Debian
+
 - Url Repo Kali (https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/)
    ![Image text](Imagenes/Repo_Kali.png)
 

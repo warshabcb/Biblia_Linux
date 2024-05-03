@@ -509,7 +509,89 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 ## Practicas Comandos
 
- -
+ 
+
+
+## Solución de Problemas al Instalar Tarjeta de Video NVIDIA GTX 1650
+
+### Mensaje de Error.
+
+    ```error
+      WARNING: The Nouveau kernel driver is currently in use by your system. This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding.
+    ```
+
+### Pasos para la Instalación
+
+1. **Desinstalar el Controlador Nouveau**
+   - **Crear un archivo de configuración para deshabilitar Nouveau**:
+     ```
+     echo "blacklist nouveau" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
+     echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
+     ```
+
+2. **Actualizar el GRUB**
+   - **Modificar la configuración de GRUB** para incluir la configuración de Nouveau:
+     ```bash
+     sudo nano /etc/default/grub
+     ```
+     Añade `nouveau.modeset=0` a la línea `GRUB_CMDLINE_LINUX_DEFAULT`:
+     ```bash
+     GRUB_CMDLINE_LINUX_DEFAULT="quiet nouveau.modeset=0"
+     ```
+     Guarda los cambios y actualiza GRUB:
+     ```bash
+     sudo update-grub
+     ```
+   - **Regenerar initramfs**:
+     ```bash
+     sudo update-initramfs -u
+     ```
+
+3. **Instalación de Paquetes Necesarios**
+   - **Instalar paquetes básicos y herramientas**:
+     ```bash
+     sudo apt-get install linux-headers-$(uname -r) firmware-linux firmware-linux-nonfree pkg-config software-properties-common build-essential bsdmainutils lm-sensors psensor glances
+     sudo apt-get update
+     ```
+
+4. **Reiniciar el Sistema**
+   - Reinicia el sistema para aplicar todos los cambios:
+     ```bash
+     sudo reboot
+     ```
+
+5. **Validar la Instalación**
+   - Comprueba si la tarjeta está instalada correctamente:
+     ```bash
+     nvidia-smi
+     ```
+
+6. **Instalar CUDA Drivers**
+   - Descarga e instala los drivers CUDA:
+     ```bash
+     wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run
+     sudo sh cuda_12.4.0_550.54.14_linux.run
+     ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Problemas al instalar Tarjeta Video NVIDIA GTX 1650 
 

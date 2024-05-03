@@ -298,8 +298,6 @@ En esta sección, encontrarás enlaces directos a varios repositorios de GitHub 
   - **Descripción**: Script útil para la enumeración de sistemas Linux. Especialmente valioso para validar configuraciones en máquinas virtuales gestionadas con Proxmox.
   - **URL**: [LinEnum en GitHub](https://github.com/rebootuser/LinEnum.git)
 
-Utiliza estos repositorios para expandir tu caja de herramientas de seguridad y optimizar tus entornos de pruebas. Siempre verifica la compatibilidad con tus sistemas antes de realizar cambios importantes.
-
 
   
 ## Sistema Operativo

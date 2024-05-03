@@ -278,14 +278,29 @@ Para añadir el repositorio de Kali en sistemas Debian, sigue los pasos detallad
     ```bash
     sudo apt install kali-linux-default
     ```
-
 Sigue estos pasos para integrar correctamente el repositorio de Kali Linux en tu sistema Debian.
 
 
-### Repositorios Github 
-- ```https://github.com/akr3ch/BugBountyBooks.git``` Libros BugBountyBooks.
-- ```https://github.com/zacheller/rockyou.git``` Wordlist Rockyou.
-- ```https://github.com/rebootuser/LinEnum.git``` Validar este repositorio en VM Proxmox.
+
+### Repositorios GitHub
+
+En esta sección, encontrarás enlaces directos a varios repositorios de GitHub que pueden ser útiles para diversas tareas de seguridad informática y pruebas de penetración:
+
+- **BugBountyBooks**:
+  - **Descripción**: Colección de libros sobre programas de recompensa por bugs.
+  - **URL**: [BugBountyBooks en GitHub](https://github.com/akr3ch/BugBountyBooks.git)
+
+- **Rockyou Wordlist**:
+  - **Descripción**: Repositorio que contiene la famosa wordlist Rockyou, útil para pruebas de fuerza bruta.
+  - **URL**: [Rockyou en GitHub](https://github.com/zacheller/rockyou.git)
+
+- **LinEnum**:
+  - **Descripción**: Script útil para la enumeración de sistemas Linux. Especialmente valioso para validar configuraciones en máquinas virtuales gestionadas con Proxmox.
+  - **URL**: [LinEnum en GitHub](https://github.com/rebootuser/LinEnum.git)
+
+Utiliza estos repositorios para expandir tu caja de herramientas de seguridad y optimizar tus entornos de pruebas. Siempre verifica la compatibilidad con tus sistemas antes de realizar cambios importantes.
+
+
   
 ## Sistema Operativo
 

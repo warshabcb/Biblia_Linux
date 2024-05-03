@@ -298,8 +298,33 @@ En esta sección, encontrarás enlaces directos a varios repositorios de GitHub 
   - **Descripción**: Script útil para la enumeración de sistemas Linux. Especialmente valioso para validar configuraciones en máquinas virtuales gestionadas con Proxmox.
   - **URL**: [LinEnum en GitHub](https://github.com/rebootuser/LinEnum.git)
 
+## Sistema Operativo
+=====================
 
-  
+### Directorios Importantes
+
+* **Seguridad**:
+        + `/etc/passwd`: Contiene información de usuarios.
+        + `/etc/shadow`: Contiene información de contraseñas de usuarios.
+        + `/etc/group`: Contiene información de grupos y sus usuarios.
+* **Configuración**:
+        + `/etc/resolv.conf`: Configura DNS. Puedes validar el DNS con el comando `dig`. Modificable temporalmente.
+* **Repositorios**:
+        + `/etc/apt/sources.list`: Archivo de repositorios del sistema.
+* **Perfiles y entornos**:
+        + `/etc/profile`: Permite definir variables de entorno y scripts. No es recomendado modificar directamente (crear un nuevo fichero 
+en `/etc/profile.d`).
+        Se ejecuta en shells con login.
+* **Entornos de bash**:
+        + `/etc/bashrc`: Permite definir variables de entorno y scripts que estarán disponibles para programas iniciados desde la shell bas
+bash. No se ejecuta en shells con login.
+* **Perfiles de usuario**:
+        + `~/.profile`: Permite definir variables de entorno y scripts. Se ejecutará al iniciar la sesión de Escritorio o en una shell con
+login. Las variables afectan a todos los programas ejecutados desde el escritorio gráfico o desde la shell.
+* **Perfiles de bash**:
+        + `~/.bashrc`: Permite definir variables de entorno y scripts. Se ejecuta cuando se abre la shell sin necesidad de hacer login.
+
+-----  
 ## Sistema Operativo
 
 ### Directorios Importantes

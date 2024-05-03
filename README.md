@@ -118,9 +118,6 @@ alias gogo='source ~/.bashrc'
    PS1='\[\e[97;1m\]\u\[\e[97m\]@\[\e[97m\]\h\[\e[0m\]:\[\e[91m\][\[\e[38;5;220m\]\w\[\e[91m\]]\[\e[38;5;35;1m\]-->\[\e[0m\]'
    ```
    
-
-
-
 ## Cálculos Aritméticos con la Terminal
 
 Realizar cálculos aritméticos directamente en la terminal de Bash puede ser útil para scripts o simplemente para cálculos rápidos. A continuación, se describen dos métodos principales para realizar operaciones aritméticas en Bash.
@@ -230,16 +227,6 @@ dpkg -l
 uname -sr
 sudo apt dist-upgrade
 ```
- 
-## Paquetes en Linux
-- Buscar Paquetes ```sudo apt search openssh-server```.
-- Otra forma de buscar paquetes ```dpkg -s top```.
-- Instalar Paquetes manual ```sudo dpkg -i paquete.deb```.
-- Eliminar paquete instalado ```sudo apt remove paquete```.
-- Listar todos los paquetes instalados ```dpkg -l```.
-- Comprobar la version del Kernel ```uname -sr```.
-- Actualizar Kernel ```sudo apt dist-upgrade``` que equivale a un ```sudo apt upgrade```.
-
 
 ### Repositorio Kali en Debian
 

@@ -181,11 +181,14 @@ Cuando te conectas a un sistema a través de SSH, es común recibir un mensaje d
     ls /etc/update-motd.d/
   ```
 
+- Eliminar o deshabilitar los scripts:
+  Si deseas eliminar completamente los mensajes, puedes eliminar o deshabilitar los scripts en este directorio. Para eliminarlos de forma segura, puedes moverlos a otro directorio o simplemente eliminar el contenido de los scripts.
+  ```bash
+    sudo rm /etc/update-motd.d/*
+  ```
 
-## Eliminar Mensajes Bienvenida al Conectar x SSH
-- Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.
-- Eliminar los archivos del Directorio ```/etc/update-motd.d/*``` por lo general solo hay uno con el comando ```uname -r```.
 
+ 
 ## Paquetes en Linux
 - Buscar Paquetes ```sudo apt search openssh-server```.
 - Otra forma de buscar paquetes ```dpkg -s top```.

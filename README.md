@@ -351,26 +351,19 @@ Mensaje Error : ```WARNING: The Nouveau kernel driver is currently in use by you
   sudo apt-get install pkg-config
   sudo apt-get install software-properties-common
   sudo apt install build-essential
-<<<<<<< HEAD
   sudo apt update
   sudo apt install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev
-=======
-  sudo apt install debconf
-  sudo apt update && sudo apt install nvidia-driver
->>>>>>> 525512ca4b6735316be9a87323a9fc5e89630826
+  sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
   sudo apt-get install wireless-tools   # iwconfig
   sudo apt-get install net-tools        # ifconfig -a
   sudo apt-get install network-manager  # nmcli dev wifi list  Lista de Wifis
-  sudo apt-get install -y build-essential libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
-  sudo apt install bsdmainutils
 
+  sudo apt install bsdmainutils
   sudo apt install lm-sensors
   sudo apt install psensor
   sudo apt install glances
-
-
   ```
-  Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
+- Debes crear un archivo de configuración en el directorio /etc/modprobe.d/ para indicarle al sistema que no cargue el módulo Nouveau. Puedes hacerlo con el siguiente comando:
   ```
   sudo echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
   ```

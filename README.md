@@ -136,7 +136,7 @@ expr 2 + 3       # Suma: retorna 5
 expr 2 - 1       # Resta: retorna 1
 expr 2 \* 2      # Multiplicación: retorna 4 (el asterisco está escapado)
 expr 10 / 2      # División: retorna 5
-
+```
 
  
 - Usando Bash con ```$((expresión))``` Ejemplo.

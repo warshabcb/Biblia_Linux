@@ -389,40 +389,6 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 
 
-
-
-## Ejemplos de Crontab
- 
-### Ejecuta `backup.sh` a las 2:30 AM todos los días
-```30 2 * * * /path/to/backup.sh```
-
-### Ejecuta un script cada 15 minutos
-```*/15 * * * * /path/to/script.sh```
-
-### Ejecuta `logs.sh` a las 3 PM los lunes
-```0 15 * * 1 /path/to/logs.sh```
-
-### Ejecuta un comando para limpiar el log a las 4:30 AM cada día
-```30 4 * * * rm -f /var/log/myapp.log```
-
-### Ejecuta `update. sh` a las 2:15 AM los viernes
-```15 2 * 5 * /path/to/update.sh```
-
-### Ejecuta un script para enviar un correo electrónico a las 9 PM cada día
-```0 21 * * * /path/to/send-email.sh```
-
-### Ejecuta `compress. sh` a las 1:45 AM los martes y jueves
-```45 1 * 2,4 * /path/to/compress.sh```
-
-### Ejecuta un script para actualizar la base de datos a las 3:30 AM cada tercer día del mes
-```30 3 1-28/3 * * /path/to/update-db.sh```
-
-
-
-
- 
-
-
 ## Buscar | Priorizar | Matar Procesos Sistema
 
 - Buscar procesos por nombre:

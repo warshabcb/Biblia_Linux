@@ -376,16 +376,16 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 **Ejemplos de Crontab**
 
-|  **Tarea**  |  **Hora**  |  **Día de la semana**  |  **Comando**  |
-|  ---  |  ---  |  ---  |  ---  |
-| Ejecutar `backup. sh`  | 2:30 AM  | Todos los días  | `30 2 * * * /path/to/backup.sh`  |
-| Ejecutar un script cada 15 minutos  | */15 * * *  | Todos los días  | `*/15 * * * * /path/to/script.sh`  |
-| Ejecutar `logs. sh`  | 3 PM  | Lunes  | `0 15 * * 1 /path/to/logs.sh`  |
-| Limpiar log a las 4:30 AM  | 30 4 * *  | Todos los días  | `30 4 * * * rm -f /var/log/myapp.log`  |
-| Ejecutar `update. sh`  | 2:15 AM  | Viernes  | `15 2 * 5 * /path/to/update.sh`  |
-| Enviar correo electrónico a las 9 PM  | 0 21 * *  | Todos los días  | `0 21 * * * /path/to/send-email.sh`  |
-| Ejecutar `compress. sh`  | 1:45 AM  | Martes y jueves  | `45 1 * 2,4 * /path/to/compress.sh`  |
-| Actualizar base de datos a las 3:30 AM  | 30 3 1-28/3 *  | Todos los días (tanto tercero día del mes)  | `30 3 1-28/3 * * /path/to/update-db.sh`  |
+| **Tarea** | **Configuración** | **Comando** |
+| --- | --- | --- |
+| Ejecutar `backup. sh` | 2:30 AM, todos los días | `30 2 * * * /path/to/backup.sh` |
+| Ejecutar un script cada 15 minutos | 0, 15, 30, 45, todos los días | `*/15 * * * * /path/to/script.sh` |
+| Ejecutar `logs. sh` | 3 PM, lunes | `0 15 * 1 * /path/to/logs.sh` |
+| Limpiar log a las 4:30 AM | 4:30 AM, todos los días | `30 4 * * * rm -f /var/log/myapp.log` |
+| Ejecutar `update. sh` | 2:15 AM, viernes | `15 2 * 5 * /path/to/update.sh` |
+| Enviar correo electrónico a las 9 PM | 9 PM, todos los días | `0 21 * * * /path/to/send-email.sh` |
+| Ejecutar `compress. sh` | 1:45 AM, martes y jueves | `45 1 * 2,4 * /path/to/compress.sh` |
+| Actualizar base de datos a las 3:30 AM | 3:30 AM, tercer día del mes (1-28) | `30 3 1-28/3 * * /path/to/update-db.sh` |
 
 
 

@@ -2,38 +2,39 @@
 
 Apuntes sobre comando en Linux y Powershell.
 
-## HotKeys Windows Terminal
+**HotKeys Windows Terminal**
+=====================================
 
-| Atajo           | Descripción                            					          |
-|-----------------|-----------------------------------------------------------|
-| Ctrl+C          | Copiar                                 					          |
-| Ctrl+V          | Pegar                                  					          |
-| Ctrl+A          | Seleccionar todo                       					          |
-| Ctrl+Shift+V    | Pegar sin formato                      					          |
-| Ctrl+Shift+C    | Copiar texto seleccionado al portapapeles (como Ctrl+C)   |
-| Ctrl+Shift+X    | Cortar texto seleccionado              					          |
-| Ctrl+T          | Abrir una nueva pestaña                					          |
-| Ctrl+Tab        | Cambiar a la pestaña siguiente         					          |
-| Ctrl+Shift+Tab  | Cambiar a la pestaña anterior          					          |
-| Ctrl+Shift+T    | Reabrir pestaña cerrada                					          |
-| Ctrl+W          | Cerrar la pestaña actual               					          |
-| Ctrl+K          | Cortar texto seleccionado              					          |
-| Ctrl+F          | Buscar                                 					          |
-| Ctrl+Shift+F    | Buscar en todas las pestañas           					          |
-| Ctrl+Plus       | Aumentar el tamaño de la fuente        					          |
-| Ctrl+Minus      | Disminuir el tamaño de la fuente       					          |
-| Ctrl+0          | Restablecer el tamaño de la fuente     					          | 
-| Ctrl+Shift+Plus | Aumentar el zoom                       					          |
-| Ctrl+Shift+Minus| Disminuir el zoom                      					          |
-| Ctrl+L          | Limpiar la pantalla                    					          |
-| Alt+Enter       | Alternar pantalla completa             					          |
-| Alt+D           | Mover el cursor al campo de entrada    					          |
-| Ctrl+Shift+V    | Pegar desde el portapapeles            					          |
-| Ctrl+Shift+D    | Dividir la terminal en una nueva pestaña vertical 		    |
-| Alt+Shift+D     | Dividir la terminal en una nueva pestaña vertical 		    |
-| Alt+Shift+-     | Dividir la terminal en una nueva pestaña horizontal 	    |
-| Ctrl+F3         | Buscar la siguiente ocurrencia         					          |
-| Ctrl+Shift+F3   | Buscar la ocurrencia anterior          					          |
+| **Atajo**          | **Descripción**                                                                               |
+|---------------------|-----------------------------------------------------------|
+| `Ctrl+C`         | Copiar                                                                                    |
+| `Ctrl+V`         | Pegar                                                                                     |
+| `Ctrl+A`         | Seleccionar todo                                                                          |
+| `Ctrl+Shift+V`   | Pegar sin formato                                                                         |
+| `Ctrl+Shift+C`   | Copiar texto seleccionado al portapapeles  (como Ctrl+C)    |
+| `Ctrl+Shift+X`   | Cortar texto seleccionado                                                                 |
+| `Ctrl+T`         | Abrir una nueva pestaña                                                                   |
+| `Ctrl+Tab`       | Cambiar a la pestaña siguiente                                                            |
+| `Ctrl+Shift+Tab` | Cambiar a la pestaña anterior                                                             |
+| `Ctrl+Shift+T`   | Reabrir pestaña cerrada                                                                   |
+| `Ctrl+W`         | Cerrar la pestaña actual                                                                  |
+| `Ctrl+K`         | Cortar texto seleccionado                                                                 |
+| `Ctrl+F`         | Buscar                                                                                    |
+| `Ctrl+Shift+F`   | Buscar en todas las pestañas                                                              |
+| `Ctrl+Plus`      | Aumentar el tamaño de la fuente                                                           |
+| `Ctrl+Minus`     | Disminuir el tamaño de la fuente                                                          |
+| `Ctrl+0`         | Restablecer el tamaño de la fuente                                                        |
+| `Ctrl+Shift+Plus` | Aumentar el zoom                                                                          |
+| `Ctrl+Shift+Minus`| Disminuir el zoom                                                                         |
+| `Ctrl+L`         | Limpiar la pantalla                                                                       |
+| `Alt+Enter`      | Alternar pantalla completa                                                                |
+| `Alt+D`          | Mover el cursor al campo de entrada                                                       |
+| `Ctrl+Shift+V`   | Pegar desde el portapapeles                                                               |
+| `Ctrl+Shift+D`   | Dividir la terminal en una nueva pestaña vertical                      |
+| `Alt+Shift+D`    | Dividir la terminal en una nueva pestaña vertical                      |
+| `Alt+Shift+-`    | Dividir la terminal en una nueva pestaña horizontal              |
+| `Ctrl+F3`        | Buscar la siguiente ocurrencia                                                            |
+| `Ctrl+Shift+F3`  | Buscar la ocurrencia anterior                                                             |
 
 
 ## Configurar SSH con Clave

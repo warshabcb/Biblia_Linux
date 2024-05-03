@@ -229,6 +229,7 @@ sudo apt dist-upgrade
 ```
 
 ### Repositorio Kali en Debian
+------------------------------
 
 Para añadir el repositorio de Kali en sistemas Debian, sigue los pasos detallados a continuación:
 

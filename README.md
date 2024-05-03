@@ -134,7 +134,7 @@ El comando `expr` permite evaluar expresiones. Es importante tener en cuenta que
 ```bash
 expr 2 + 3       # Suma: retorna 5
 expr 2 - 1       # Resta: retorna 1
-expr 2 \* 2      # Multiplicación: retorna 4 (el asterisco está escapado)
+expr 2 \* 2      # Multiplicación: retorna 4 
 expr 10 / 2      # División: retorna 5
 ```
 
@@ -143,6 +143,7 @@ expr 10 / 2      # División: retorna 5
 Bash permite realizar aritmética directamente dentro de su sintaxis usando $((expresión)). Es más flexible y fácil de usar para cálculos integrados en scripts, dado que no requiere espaciado especial o escape de caracteres.
 
 **Ejemplos:**
+
 ```bash
 echo $((2 + 2))   # Suma: imprime 4
 echo $((2 - 1))   # Resta: imprime 1

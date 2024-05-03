@@ -161,7 +161,18 @@ Aquí está una tabla rápida de operadores comunes utilizados en Bash para refe
 | `/`      | División       |
 | `%`      | Módulo         |
 
+## Eliminar Mensajes de Bienvenida al Conectar por SSH
 
+Cuando te conectas a un sistema a través de SSH, es común recibir un mensaje de bienvenida, conocido técnicamente como 'Message of the Day' (MOTD). A continuación, te explicamos cómo modificar o eliminar estos mensajes.
+
+### Modificar el Mensaje de Bienvenida
+
+- Editar el archivo MOTD:
+  Para cambiar el mensaje de bienvenida, edita el archivo /etc/motd en tu servidor. Puedes escribir el mensaje que desees que se muestre al conectarte vía SSH.
+  ```bash
+  sudo nano /etc/motd
+  ```
+  Aquí, puedes insertar el texto que desees que aparezca como mensaje de bienvenida.
 
 ## Eliminar Mensajes Bienvenida al Conectar x SSH
 - Modificar Archivo ```/etc/motd``` puedes poner el mensaje que quieras.

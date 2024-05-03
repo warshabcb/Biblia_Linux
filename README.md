@@ -67,25 +67,23 @@ servidor Linux:
 "commandline": "ssh -i C:\\Users\\Warshab\\.ssh\\NombreFile user@IP"
 ```
 
+### Alias Utiles
+```bash
+alias cl='clear'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias sl='/usr/games/sl'
+alias meminfo='cat /proc/meminfo | grep MemTotal'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias now='date +"%Y-%m-%d %H:%M:%S"'
+alias myip='curl http://ipinfo.io/ip;echo'
+alias count='echo "Número de archivos:" && ls -1 | wc -l'
+alias gogo='source ~/.bashrc'
+```
 
 
 
-
-## Configuraciones .Bashrc
-- Alias Utiles.
-  ```bash
-    alias cl='clear'
-    alias update='sudo apt update && sudo apt upgrade -y'
-    alias sl='/usr/games/sl'
-    alias meminfo='cat /proc/meminfo | grep MemTotal'
-    alias ..='cd ..'
-    alias ...='cd ../../'
-    alias ....='cd ../../../'
-    alias now='date +"%Y-%m-%d %H:%M:%S"'
-    alias myip='curl http://ipinfo.io/ip;echo'
-    alias count='echo "Numero de Archivos :" && ls -1 | wc -l'
-    alias gogo='source ~/.bashrc'
-  ```
 ## $ _ Bash Prompt Generator
 -  Podemos personalizar el prompt de nuestra terminal con esta pagina web   ```https://bash-prompt-generator.org/```
   

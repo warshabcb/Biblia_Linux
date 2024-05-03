@@ -67,6 +67,36 @@ servidor Linux:
 "commandline": "ssh -i C:\\Users\\Warshab\\.ssh\\NombreFile user@IP"
 ```
 
+**Alias para Archivo .bashrc  Categorías**
+-------------
+
+### **Limpiadores**
+
+* `alias cl='clear'`: Limpia la pantalla.
+* `alias update='sudo apt update && sudo apt upgrade -y'`: Actualiza los paquetes y upgrade.
+
+### **Juegos y entretenimiento**
+
+* `alias sl='/usr/games/sl'`: Inicia el juego SL.
+* `alias meminfo='cat /proc/meminfo | grep MemTotal'`: Muestra información de memoria física.
+
+### **Navegación**
+
+* `alias ..='cd ..'`: Regresa a la carpeta superior.
+* `alias ...='cd ../../'`: Regresa a la carpeta superior varias veces.
+* `alias ....='cd ../../../'`: Regresa a la carpeta superior varias veces.
+
+### **Información y sistema**
+
+* `alias now='date +%Y-%m-%d %H:%M:%S'`: Muestra la fecha y hora actual.
+* `alias myip='curl http://ipinfo.io/ip;echo'`: Muestra la dirección IP actual.
+* `alias count='echo "Número de archivos:" && ls -1 | wc -l'`: Cuenta el número de archivos en la carpeta actual.
+
+### **Configuración**
+
+* `alias gogo='source ~/.bashrc'`: Reemplaza el archivo de configuración Bash.
+
+
 ### Alias Utiles
 ```bash
 alias cl='clear'

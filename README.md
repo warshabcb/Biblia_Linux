@@ -111,8 +111,6 @@ alias myip='curl http://ipinfo.io/ip;echo'
 alias gogo='source ~/.bashrc'
 ```
 
-
-
 ## $ _ Bash Prompt Generator
 - Podemos personalizar el prompt de nuestra terminal con esta pagina web. ```https://bash-prompt-generator.org/```
     
@@ -120,16 +118,27 @@ alias gogo='source ~/.bashrc'
    PS1='\[\e[97;1m\]\u\[\e[97m\]@\[\e[97m\]\h\[\e[0m\]:\[\e[91m\][\[\e[38;5;220m\]\w\[\e[91m\]]\[\e[38;5;35;1m\]-->\[\e[0m\]'
    ```
    
-## Calculos Aritmeticos con Terminal
 
-- Usando ```expr``` Ejemplos.
 
-  ```bash
-      expr 2 + 3
-      expr 2 - 1
-      expr 2 \* 2
-      expr 10 / 2
-  ```
+
+## Cálculos Aritméticos con la Terminal
+
+Realizar cálculos aritméticos directamente en la terminal de Bash puede ser útil para scripts o simplemente para cálculos rápidos. A continuación, se describen dos métodos principales para realizar operaciones aritméticas en Bash.
+
+### Usando `expr`
+
+El comando `expr` permite evaluar expresiones. Es importante tener en cuenta que los operadores deben estar separados por espacios y la multiplicación debe ser escapada para evitar que sea interpretada como un carácter especial.
+
+**Ejemplos:**
+
+```bash
+expr 2 + 3       # Suma: retorna 5
+expr 2 - 1       # Resta: retorna 1
+expr 2 \* 2      # Multiplicación: retorna 4 (el asterisco está escapado)
+expr 10 / 2      # División: retorna 5
+
+
+ 
 - Usando Bash con ```$((expresión))``` Ejemplo.
 
   ```bash

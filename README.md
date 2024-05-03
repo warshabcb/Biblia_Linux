@@ -374,48 +374,37 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 | `-`       | Define un rango de valores (p. ej., `1-5`).                                              |
 | `/`       | Especifica un intervalo de tiempo (p. ej., `*/10` para "cada 10 minutos").               |
 
-
-
-
-
-
-
----
-## Crontab en Linux  ```crontab -e```
-
-Crontab es una herramienta de programación de tareas en Linux que permite ejecutar scripts o comandos en momentos específicos de manera automática. La tabla siguiente resume su sintaxis y opciones:
-
-| Campo             | Valor                  | Descripción                                          |
-|-------------------|------------------------|------------------------------------------------------|
-| Minuto            | `0-59`                 | El minuto en el que se ejecutará la tarea.           |
-| Hora              | `0-23`                 | La hora en la que se ejecutará la tarea.             |
-| Día del mes       | `1-31`                 | El día del mes en el que se ejecutará la tarea.      |
-| Mes               | `1-12` o `Jan-Dec`     | El mes en el que se ejecutará la tarea.              |
-| Día de la semana  | `0-7` o `Sun-Sat`      | El día de la semana en el que se ejecutará la tarea. |
-| Comando           | `/path/to/command`     | El comando o script que se ejecutará.                |
-
-### Caracteres Especiales en Crontab
-
-| Carácter | Descripción                                                                            |
-|----------|----------------------------------------------------------------------------------------|
-| `*`      | Representa "cada" unidad de tiempo (cada hora, cada día, etc.)                         |
-| `,`      | Permite especificar una lista de valores (p.ej., `1,3,5`).                             |
-| `-`      | Define un rango de valores (p.ej., `1-5`).                                             |
-| `/`      | Especifica un intervalo de tiempo (p.ej., `*/10` para "cada 10 minutos").              |
-
-
 ### Ejemplos de Crontab
+#### Ejemplos de Uso
 
-```cron
-# Ejecuta `backup.sh` a las 2:30 AM todos los días
+#### Ejecuta `backup.sh` a las 2:30 AM todos los días
 30 2 * * * /path/to/backup.sh
 
-# Ejecuta un script cada 15 minutos
+#### Ejecuta un script cada 15 minutos
 */15 * * * * /path/to/script.sh
 
-# Ejecuta `logs.sh` a las 3 PM los lunes
+#### Ejecuta `logs.sh` a las 3 PM los lunes
 0 15 * * 1 /path/to/logs.sh
+
+#### Ejecuta un comando para limpiar el log a las 4:30 AM cada día
+30 4 * * * rm -f /var/log/myapp.log
+
+#### Ejecuta `update. sh` a las 2:15 AM los viernes
+15 2 * 5 * /path/to/update.sh
+
+#### Ejecuta un script para enviar un correo electrónico a las 9 PM cada día
+0 21 * * * /path/to/send-email.sh
+
+#### Ejecuta `compress. sh` a las 1:45 AM los martes y jueves
+45 1 * 2,4 * /path/to/compress.sh
+
+#### Ejecuta un script para actualizar la base de datos a las 3:30 AM cada tercer día del mes
+30 3 1-28/3 * * /path/to/update-db.sh
 ```
+
+
+
+ 
 
 
 ## Buscar | Priorizar | Matar Procesos Sistema

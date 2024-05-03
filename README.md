@@ -187,7 +187,49 @@ Cuando te conectas a un sistema a través de SSH, es común recibir un mensaje d
     sudo rm /etc/update-motd.d/*
   ```
 
+## Paquetes en Linux
+=====================
 
+### Buscar Paquetes
+
+* Utiliza `sudo apt search <paquete>` para buscar paquetes en el repositorio de Linux.
+* Otra forma de buscar paquetes es mediante `dpkg -s top`, que te muestra una lista de paquetes instalados.
+
+### Instalar Paquetes
+
+* Para instalar un paquete manualmente, utiliza `sudo dpkg -i <paquete>.deb`.
+* Si el paquete no está disponible en los repositorios oficiales, puedes instalarlo mediante `sudo apt install --allow-downgrades <paquete>`.
+
+### Eliminar Paquetes
+
+* Para eliminar un paquete instalado, utiliza `sudo apt remove <paquete>`.
+* Recuerda que eliminar un paquete puede causar problemas en tu sistema, por lo que asegúrate de que no estás eliminando un paquete esencial.
+
+### Listar todos los Paquetes Instalados
+
+* Para listrar todos los paquetes instalados, utiliza `dpkg -l`.
+* Esta lista te muestra todos los paquetes instalados en tu sistema, incluyendo versiones y dependencias.
+
+### Comprobar la Versión del Kernel
+
+* Para comprobar la versión del kernel actual, utiliza `uname -sr`. Esto te muestra la información del kernel, incluyendo su versión y fecha de compilación.
+* Esta información es útil para comprobar si tienes una versión actualizada o no.
+
+### Actualizar el Kernel
+
+* Para actualizar el kernel, utiliza `sudo apt dist-upgrade`, que es equivalente a un `sudo apt upgrade`.
+* Esto te actualiza la versión del kernel y otros paquetes instalados.
+* Recuerda que actualizar el kernel puede causar problemas en tu sistema, por lo que asegúrate de que no estás actualizando un paquete esencial.
+
+```bash
+sudo apt search openssh-server
+dpkg -s top
+sudo dpkg -i paquete.deb
+sudo apt remove paquete
+dpkg -l
+uname -sr
+sudo apt dist-upgrade
+```
  
 ## Paquetes en Linux
 - Buscar Paquetes ```sudo apt search openssh-server```.

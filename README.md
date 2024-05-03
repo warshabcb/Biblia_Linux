@@ -324,8 +324,6 @@ login. Las variables afectan a todos los programas ejecutados desde el escritori
 * **Perfiles de bash**:
         + `~/.bashrc`: Permite definir variables de entorno y scripts. Se ejecuta cuando se abre la shell sin necesidad de hacer login.
 
-
-
 ### Variables de Entorno
  -  Mostrar lista de variables de Entorno. ```printenv```.
 ### Funciones de Entorno

@@ -413,7 +413,7 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 ### Ejecutar un proceso en segundo plano
 
 * `./infinito.sh &`
-* ![Image text](Imagenes/second-plano.png)
+
 
 ### Ejecutar programa en un solo CPU y en segundo plano
 
@@ -428,50 +428,6 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 -- Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
 * `renice 10 -p #proceso` ![Image text](Imagenes/renice.png)
 ```
-
-
-
-
-
-
-
-## Buscar | Priorizar | Matar Procesos Sistema
-
-- Buscar procesos por nombre:
-  ```bash
-    pgrep openvpn
-  ```
-- Matar un proceso por medio del PIP
-  ```bash
-    sudo kill -9 PID
-  ```
-- Matar un proceso por medio del nombre:
-  ```bash
-    sudo pkill openvpn
-  ```
-- Detener procesos ```Ctrl+z``` 
-  ```bash
-  Ctrl+z
-  ```
-  ![Image text](Imagenes/Ctrl+z.png)
-- Ejecutar un proceso en segundo plano.
-  ```bash
-  ./infinito.sh &
-  ```
-- Ejecutar programa en un solo CPU y en segundo plano.
-  ```bash
-  taskset --cpu-list 1 ./infinito.sh &
-  ```
-- Nice y Renice procesos (A mayor numero mas amigable con los otros procesos) ```-20``` Mayor Prioridad  ```20``` Menor Prioridad.
-  -- Nice
-  ```bash
-  taskset --cpu-list 1 nice -n 10 ./infinito.sh &  
-  ```
-  -- Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
-  ```bash  
-   renice 10 -p #proceso    
-  ```
-  ![Image text](Imagenes/CPU_Renice.png)
 
 
 ## Comando TOP

@@ -398,7 +398,7 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 ### Matar un proceso por medio del PIP
 
 * `sudo kill -9 PID`
-* ![Image text](Imagenes/kill-9_PID.png)
+* ![Image text](Imagenes/kill.png)
 
 ### Matar un proceso por medio del nombre
 

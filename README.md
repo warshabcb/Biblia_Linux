@@ -434,7 +434,6 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 
 
-
 ## Buscar | Priorizar | Matar Procesos Sistema
 
 - Buscar procesos por nombre:

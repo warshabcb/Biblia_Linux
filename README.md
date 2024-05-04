@@ -406,7 +406,7 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 ### Detener procesos
 
-* `Ctrl+z` ![Image text](Imagenes/Ctrl+z.png)
+* `Ctrl+z` ![Image text](Imagenes/Ctrlz.png)
 * `fg` para reanudar el proceso detenido
 
 ### Ejecutar un proceso en segundo plano

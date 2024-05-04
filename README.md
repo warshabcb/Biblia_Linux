@@ -387,6 +387,52 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 | Ejecutar `compress. sh` | 1:45 AM, martes y jueves | `45 1 * 2,4 * /path/to/compress.sh` |
 | Actualizar base de datos a las 3:30 AM | 3:30 AM, tercer día del mes (1-28) | `30 3 1-28/3 * * /path/to/update-db.sh` |
 
+# Procesos y Shell
+
+## Buscar, Priorizar, Matar Procesos
+
+### Buscar procesos por nombre
+
+* `pgrep openvpn`
+
+### Matar un proceso por medio del PIP
+
+* `sudo kill -9 PID`
+* ![Image text](Imagenes/kill-9_PID.png)
+
+### Matar un proceso por medio del nombre
+
+* `sudo pkill openvpn`
+
+### Detener procesos
+
+* `Ctrl+z` ![Image text](Imagenes/Ctrl+z.png)
+* `fg` para reanudar el proceso detenido
+
+### Ejecutar un proceso en segundo plano
+
+* `./infinito.sh &`
+* ![Image text](Imagenes/second-plano.png)
+
+### Ejecutar programa en un solo CPU y en segundo plano
+
+* `taskset --cpu-list 1 ./infinito.sh &`
+
+### Nice y Renice procesos (A mayor número más amigable con los otros procesos)
+
+-- Nice
+* `taskset --cpu-list 1 nice -n 10 ./infinito.sh &`
+* ![Image text](Imagenes/nice.png)
+
+-- Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
+* `renice 10 -p #proceso` ![Image text](Imagenes/renice.png)
+```
+
+
+
+
+
+
 
 
 ## Buscar | Priorizar | Matar Procesos Sistema

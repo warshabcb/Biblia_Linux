@@ -819,6 +819,11 @@ python3 -m venv mi_entorno
 source mi_entorno/bin/activate
 
 ```
+### Desactivar Entorno
+```bash
+deactivate
+
+```
 ### Instalar Librerias
 ```bash
 pip install matplotlib seaborn

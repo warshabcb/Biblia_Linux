@@ -117,6 +117,10 @@ alias gogo='source ~/.bashrc'
    ```bash
    PS1='\[\e[97;1m\]\u\[\e[97m\]@\[\e[97m\]\h\[\e[0m\]:\[\e[91m\][\[\e[38;5;220m\]\w\[\e[91m\]]\[\e[38;5;35;1m\]-->\[\e[0m\]'
    ```
+
+   ```bash
+   PS1='\[\e[1m\]\u@\h\[\e[0m\] \[\e[91m\][\[\e[38;5;214m\]\w\[\e[91m\]]\[\e[0m\] \[\e[38;5;40;1m\]>\[\e[0m\] '
+   ```
    
 ## Cálculos Aritméticos con la Terminal
 

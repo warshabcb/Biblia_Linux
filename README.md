@@ -239,7 +239,7 @@ Para añadir el repositorio de Kali en sistemas Debian, sigue los pasos detallad
 
 - **URL del Repositorio de Kali:**
   - Visita la [documentación oficial de Kali Linux](https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/).
-  - ![Descripción de la imagen del repositorio Kali](Imagenes/Repo_Kali.png)
+    ![Descripción de la imagen del repositorio Kali](Imagenes/Repo_Kali.png)
 
 - **Configuración del Repositorio:**
   - Es recomendable agregar el repositorio en el directorio `/etc/apt/sources.list.d/` y no directamente en el archivo `/etc/apt/sources.list` para mantener las configuraciones organizadas y evitar conflictos. Usa el siguiente comando:
@@ -427,11 +427,10 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 
 -- Nice
 * `taskset --cpu-list 1 nice -n 10 ./infinito.sh &`
-* ![Image text](Imagenes/nice.png)
+
 
 -- Renice | Si se debe de dar mas prioridad puede que solicite permisos en caso contrario sin problemas.
-* `renice 10 -p #proceso` ![Image text](Imagenes/renice.png)
-```
+* ```renice 10 -p #proceso```
 
 
 ## Comando TOP

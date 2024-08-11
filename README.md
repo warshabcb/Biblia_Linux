@@ -451,7 +451,7 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 - Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del ```=``` mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
 - Mostrar solo un proceso con Top. ``` top -p 774```
   
-  ![Top](Imagenes/Top.png)
+  ![Top](Imagenes/top.png)
 
  ## Expresiones Regulares
 

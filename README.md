@@ -67,6 +67,12 @@ servidor Linux:
 "commandline": "ssh -i C:\\Users\\Warshab\\.ssh\\NombreFile user@IP"
 ```
 
+**Generar Numeros Aleatorios Terminal**
+
+```bash
+echo $RANDOM
+```
+
 **Alias para Archivo .bashrc  Categorías**
 -------------
 
@@ -366,6 +372,10 @@ crontab:
 | Mes                | `1-12` o `Jan-Dec`      | El mes en el que se ejecutará la tarea.               |
 | Día de la semana   | `0-7` o `Sun- Sat`       | El día de la semana en el que se ejecutará la tarea.  |
 | Comando            | `/path/to/command`      | El comando o script que se ejecutará.                 |
+
+![Crontab](Imagenes/Crontab.png)
+
+
 
 ### Caracteres Especiales
 

@@ -449,6 +449,9 @@ Las siguientes son algunas de las características especiales que puedes utiliza
 - Filtrar procesos por el nombre del Usuario ```u```.
 - Cambiar valores de medicion a Megas | Gigas etc  ```e```.
 - Filtrar los procesos por alguna de las columnas disponibles ```o```  escribimos el nombre de la columna seguido del ```=``` mas el valor a buscar ```COMMAND=top``` para regresar    con solo presionar la tecla ```=```.
+- Mostrar solo un proceso con Top. ``` top -p 774```
+  
+  ![Top](Imagenes/Top.png)
 
  ## Expresiones Regulares
 

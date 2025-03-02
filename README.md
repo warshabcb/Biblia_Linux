@@ -133,7 +133,7 @@ alias ctrs='source ~/enviroment/ctrs/bin/activate'
 
 ## Información sobre fstab (Tabla de Sistemas de Archivos)
 
-El archivo `/etc/fstab` es un archivo crucial en sistemas Linux que define cómo se montan los dispositivos de almacenamiento en el sistema durante el arranque. Cada línea en este archivo representa un punto de montaje, especificando el dispositivo, el punto de montaje, el tipo de sistema de archivos, las opciones de montaje y otras configuraciones. Entender estas configuraciones es esencial para el correcto funcionamiento del sistema y la integridad de los datos. Aquí tienes un desglose de la configuración actual y una explicación más detallada:
+El archivo /etc/fstab en Linux define cómo se montan los dispositivos de almacenamiento durante el arranque, especificando el dispositivo, el punto de montaje y las opciones:
 
 *   `/dev/sda1`: Partición raíz, montada en `/`, `ext4`, `errors=remount-ro`. Esta es la partición principal de arranque.
     *   **Dispositivo:** `/dev/sda1` - Este es el nodo de dispositivo que representa la primera partición en el primer disco duro (o unidad de disco).

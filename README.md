@@ -131,81 +131,80 @@ alias ctrs='source ~/enviroment/ctrs/bin/activate'
    PS1='\[\e[1m\]\u@\h\[\e[0m\] \[\e[91m\][\[\e[38;5;214m\]\w\[\e[91m\]]\[\e[0m\] \[\e[38;5;40;1m\]>\[\e[0m\] '
    ```
 
-## fstab Information
+## Información sobre fstab (Tabla de Sistemas de Archivos)
 
-The `/etc/fstab` file defines how storage devices are mounted on this system at boot time. Each line in the file represents a mount point, specifying the device, mount point, filesystem type, mount options, and other settings. Understanding these settings is crucial for proper system operation and data integrity. Here's a breakdown of the current configuration:
+El archivo `/etc/fstab` es un archivo crucial en sistemas Linux que define cómo se montan los dispositivos de almacenamiento en el sistema durante el arranque. Cada línea en este archivo representa un punto de montaje, especificando el dispositivo, el punto de montaje, el tipo de sistema de archivos, las opciones de montaje y otras configuraciones. Entender estas configuraciones es esencial para el correcto funcionamiento del sistema y la integridad de los datos. Aquí tienes un desglose de la configuración actual y una explicación más detallada:
 
-*   `/dev/sda1`: Root partition, mounted at `/`, `ext4`, `errors=remount-ro`. This is the primary boot partition.
-    *   **Device:** `/dev/sda1` - This is the device node representing the first partition on the first hard drive (or disk).
-    *   **Mount Point:** `/` - This is the root directory of the file system. All other directories are contained within this.
-    *   **Filesystem Type:** `ext4` - This is the filesystem type used to format the partition. `ext4` is a journaling filesystem commonly used on Linux systems.
-    *   **Mount Options:** `errors=remount-ro` - This option specifies what to do if errors are detected on this mount point. In this case, the option remounts the partition as read-only.
-    *   **Dump Field**: `0` - This field (not explicitly shown but it is there), dictates whether the filesystem should be backed up with the `dump` command. 0 means it will not be backed up.
-    *   **Pass Field**: `1`- This field (not explicitly shown but it is there) is used by `fsck` to determine the order in which filesystems should be checked at boot time. The root partition has to be the first to be checked, so it is set to 1.
+*   `/dev/sda1`: Partición raíz, montada en `/`, `ext4`, `errors=remount-ro`. Esta es la partición principal de arranque.
+    *   **Dispositivo:** `/dev/sda1` - Este es el nodo de dispositivo que representa la primera partición en el primer disco duro (o unidad de disco).
+    *   **Punto de Montaje:** `/` - Este es el directorio raíz del sistema de archivos. Todos los demás directorios se encuentran dentro de este.
+    *   **Tipo de Sistema de Archivos:** `ext4` - Este es el tipo de sistema de archivos utilizado para formatear la partición. `ext4` es un sistema de archivos con registro por diario (journaling) que se usa comúnmente en sistemas Linux.
+    *   **Opciones de Montaje:** `errors=remount-ro` - Esta opción especifica qué hacer si se detectan errores en este punto de montaje. En este caso, la opción vuelve a montar la partición como solo lectura (`read-only`). Esto previene daños mayores en el sistema de archivos en caso de errores.
+    *   **Campo de Dump (Volcado):** `0` - Este campo (que no se muestra explícitamente pero está presente) indica si el sistema de archivos debe ser respaldado con el comando `dump`. `0` significa que no se hará backup con este comando.
+    *   **Campo de Pass (Paso):** `1` - Este campo (que tampoco se muestra explícitamente pero está presente) es usado por `fsck` para determinar el orden en el que los sistemas de archivos deben ser revisados al arrancar. La partición raíz debe ser la primera en ser verificada, por lo que se le asigna el valor `1`.
 
-*   `/dev/sdb1`: Data partition, mounted at `/data`, `ext4`, `defaults`. This partition holds user data.
-    *   **Device:** `/dev/sdb1` - The first partition on the second hard drive.
-    *   **Mount Point:** `/data` - This is the directory where the data partition will be accessible.
-    *   **Filesystem Type:** `ext4` - The same filesystem used for the root partition.
-    *   **Mount Options:** `defaults` - This is a shorthand that represents a set of common options, including `rw`, `suid`, `dev`, `exec`, `auto`, `nouser`, and `async`.
-        *   `rw`: Read and write access.
-        *   `suid`: Allow set-user-identifier or set-group-identifier bits.
-        *   `dev`: Interpret character or block special devices on the filesystem.
-        *   `exec`: Permit execution of binaries.
-        *   `auto`: Mount this filesystem at boot time (or when `mount -a` is used).
-        *   `nouser`: Only root can mount the filesystem.
-        * `async`: All I/O to the filesystem should be done asynchronously
-    * **Dump Field**: `0` - This partition won't be included in the `dump` backups.
-    * **Pass Field**: `2`- Checked after the root partition, the other partitions should have the pass field set to 2.
+*   `/dev/sdb1`: Partición de datos, montada en `/data`, `ext4`, `defaults`. Esta partición contiene datos de usuario.
+    *   **Dispositivo:** `/dev/sdb1` - La primera partición en el segundo disco duro.
+    *   **Punto de Montaje:** `/data` - Este es el directorio donde la partición de datos será accesible.
+    *   **Tipo de Sistema de Archivos:** `ext4` - El mismo sistema de archivos usado para la partición raíz.
+    *   **Opciones de Montaje:** `defaults` - Esta es una abreviatura que representa un conjunto de opciones comunes, incluyendo `rw`, `suid`, `dev`, `exec`, `auto`, `nouser` y `async`.
+        *   `rw`: Acceso de lectura y escritura.
+        *   `suid`: Permite los bits set-user-identifier o set-group-identifier.
+        *   `dev`: Interpreta los dispositivos especiales de carácter o bloque en el sistema de archivos.
+        *   `exec`: Permite la ejecución de binarios.
+        *   `auto`: Monta este sistema de archivos durante el arranque (o cuando se usa `mount -a`).
+        *   `nouser`: Solo el usuario `root` puede montar el sistema de archivos.
+        *   `async`: Todas las operaciones de E/S (entrada/salida) hacia el sistema de archivos se harán de forma asíncrona.
+    *   **Campo de Dump (Volcado):** `0` - Esta partición no se incluirá en las copias de seguridad con `dump`.
+    *   **Campo de Pass (Paso):** `2`- Se verifica después de la partición raíz. Las demás particiones deben tener el campo de paso establecido en `2`.
 
-*   `UUID=some-long-uuid`: Swap partition, mounted as `swap`.
-    *   **Device:** `UUID=some-long-uuid` - Using the UUID (Universally Unique Identifier) is preferred over device names (e.g., `/dev/sdX`) because it's more robust. UUIDs remain consistent even if the disk order changes.
-    *   **Mount Point:** `swap` - This keyword indicates that the partition will be used as a swap partition, not as a regular directory.
-    *   **Filesystem Type:** `swap` - Indicates that the partition is a swap partition.
-    * **Dump Field**: `0` - Swap partition should not be backed up.
-    * **Pass Field**: `0`- Swap partition doesn't need a check.
+*   `UUID=some-long-uuid`: Partición de intercambio (swap), montada como `swap`.
+    *   **Dispositivo:** `UUID=some-long-uuid` - Usar el UUID (Identificador Único Universal) es preferible a los nombres de dispositivos (por ejemplo, `/dev/sdX`) porque es más robusto. Los UUID permanecen consistentes incluso si el orden de los discos cambia.
+    *   **Punto de Montaje:** `swap` - Esta palabra clave indica que la partición se utilizará como una partición de intercambio, no como un directorio regular.
+    *   **Tipo de Sistema de Archivos:** `swap` - Indica que la partición es una partición de intercambio.
+    *   **Campo de Dump (Volcado):** `0` - La partición de intercambio no debe ser respaldada.
+    *   **Campo de Pass (Paso):** `0`- La partición de intercambio no necesita una verificación con `fsck`.
 
-*   `//192.168.1.10/sharedfolder /mnt/shared cifs user,credentials=/root/.smbcredentials,iocharset=utf8,sec=ntlm 0 0`: Mounts a shared network folder using CIFS.
-    *   **Device:** `//192.168.1.10/sharedfolder` - This is a network path to a shared folder on a server with the IP address 192.168.1.10.
-    *   **Mount Point:** `/mnt/shared` - The local directory where the network share will be mounted.
-    *   **Filesystem Type:** `cifs` - This is the Common Internet File System protocol, commonly used for network shares in Windows environments (also known as SMB).
-    *   **Mount Options:**
-        *   `user`: Allows a non-root user to mount and unmount the share.
-        *   `credentials=/root/.smbcredentials` - Specifies a file containing the username and password for accessing the share. This file should have permissions set to `600` (read/write for the owner, no access for others).
-        *   `iocharset=utf8` - Specifies the character set used for filename encoding. UTF-8 is recommended for broad compatibility.
-        *   `sec=ntlm` - Specifies the security protocol to be used. `ntlm` is a commonly used protocol for SMB. Other options may include `ntlmssp` or `krb5`.
-    * **Dump Field**: `0` - Network partitions should not be backed up.
-    * **Pass Field**: `0`- Network partitions don't need a check.
+*   `//192.168.1.10/sharedfolder /mnt/shared cifs user,credentials=/root/.smbcredentials,iocharset=utf8,sec=ntlm 0 0`: Monta una carpeta compartida en red usando CIFS.
+    *   **Dispositivo:** `//192.168.1.10/sharedfolder` - Esta es una ruta de red a una carpeta compartida en un servidor con la dirección IP 192.168.1.10.
+    *   **Punto de Montaje:** `/mnt/shared` - El directorio local donde se montará el recurso compartido de red.
+    *   **Tipo de Sistema de Archivos:** `cifs` - Este es el protocolo Common Internet File System, comúnmente usado para recursos compartidos de red en entornos Windows (también conocido como SMB).
+    *   **Opciones de Montaje:**
+        *   `user`: Permite que un usuario no root monte y desmonte el recurso compartido.
+        *   `credentials=/root/.smbcredentials` - Especifica un archivo que contiene el nombre de usuario y la contraseña para acceder al recurso compartido. Este archivo debe tener permisos establecidos en `600` (lectura/escritura para el propietario, sin acceso para otros).
+        *   `iocharset=utf8` - Especifica el juego de caracteres (codificación) usado para los nombres de archivo. UTF-8 se recomienda para una amplia compatibilidad.
+        *   `sec=ntlm` - Especifica el protocolo de seguridad a usar. `ntlm` es un protocolo comúnmente usado para SMB. Otras opciones podrían incluir `ntlmssp` o `krb5`.
+    *   **Campo de Dump (Volcado):** `0` - Los recursos compartidos de red no deberían ser respaldados.
+    *   **Campo de Pass (Paso):** `0`- Los recursos compartidos de red no necesitan una verificación con `fsck`.
 
-**Commonly Used Mount Options (Beyond `defaults`):**
+**Opciones de Montaje Comúnmente Usadas (Más allá de `defaults`):**
 
-*   `noauto`: Do not automatically mount this at boot. You would have to manually mount it.
-*   `user` / `users`: Allow regular users to mount/unmount. `users` allow any user to mount, `user` allow the user who mount the file system to unmount it.
-*   `ro`: Mount as read-only.
-*   `rw`: Mount as read/write (this is usually part of `defaults`).
-*   `noexec`: Do not allow binaries to be executed from this partition.
-*   `nosuid`: Ignore the set-user-ID and set-group-ID bits.
-*   `nodev`: Do not interpret character or block special devices on the filesystem.
-*   `sync`: All I/O to the filesystem should be done synchronously.
-*   `data=journal`: All file data is written into the journal before writing it to the filesystem.
-* `data=ordered`: This is the default. All file data is forced directly out to the main file system prior to its metadata being committed to the journal.
-* `data=writeback`: File data is written into the main filesystem without any ordering guarantees. It may be written into the main file system after its metadata has been committed to the journal.
-*  `nofail`: Do not report errors for this device if it does not exist. This is useful for optional mounts.
-* `x-systemd.automount` : Mount the device when the mount point is accessed.
+*   `noauto`: No montar automáticamente al arrancar. Deberás montarlo manualmente.
+*   `user` / `users`: Permite a los usuarios regulares montar/desmontar. `users` permite que cualquier usuario monte, `user` permite al usuario que montó el sistema de archivos desmontarlo.
+*   `ro`: Montar como solo lectura.
+*   `rw`: Montar como lectura/escritura (esto usualmente es parte de `defaults`).
+*   `noexec`: No permitir que se ejecuten binarios desde esta partición.
+*   `nosuid`: Ignorar los bits set-user-ID y set-group-ID.
+*   `nodev`: No interpretar dispositivos especiales de carácter o bloque en el sistema de archivos.
+*   `sync`: Todas las operaciones de E/S hacia el sistema de archivos se harán de forma síncrona.
+*   `data=journal`: Todos los datos de los archivos se escriben en el diario (journal) antes de escribirlos en el sistema de archivos.
+*   `data=ordered`: Esta es la opción por defecto. Todos los datos de los archivos se fuerzan directamente al sistema de archivos principal antes de que sus metadatos se confirmen en el diario.
+*   `data=writeback`: Los datos de los archivos se escriben en el sistema de archivos principal sin ninguna garantía de orden. Puede que se escriban en el sistema de archivos principal después de que sus metadatos se hayan confirmado en el diario.
+*   `nofail`: No reportar errores para este dispositivo si no existe. Esto es útil para montajes opcionales.
+*   `x-systemd.automount` : Montar el dispositivo cuando se acceda al punto de montaje.
 
-**Important Notes:**
+**Notas Importantes:**
 
-*   Incorrect entries in `/etc/fstab` can prevent your system from booting. Make sure you have backups before making any changes.
-* Use UUID instead of the device path if possible.
-*   Always test changes in a non-production environment first.
-* If you have the chance, make sure you understand the `mount` command.
-*  Make sure you create the mount point directory, before modifying the file `fstab`.
-* If you are working with sensitive data, make sure you understand the security implications of each option.
-* If you want a mount point to be permanent, add it to the `fstab` file.
-* For network mounts, make sure you have the required protocol packages installed (e.g., `cifs-utils` for CIFS).
-* The credentials file for network mounts should be protected by setting the correct file permissions. (600)
-* Be sure that you add the correct values for the `dump` and `pass` fields.
-
+* Entradas incorrectas en `/etc/fstab` pueden impedir que tu sistema arranque. Asegúrate de tener copias de seguridad antes de hacer cambios.
+* Usa UUID en lugar de la ruta del dispositivo si es posible.
+* Siempre prueba los cambios en un entorno que no sea de producción primero.
+* Si tienes la oportunidad, asegúrate de entender el comando `mount`.
+* Asegúrate de crear el directorio del punto de montaje, antes de modificar el archivo `fstab`.
+* Si estás trabajando con datos sensibles, asegúrate de entender las implicaciones de seguridad de cada opción.
+* Si quieres que un punto de montaje sea permanente, añádelo al archivo `/etc/fstab`.
+* Para montajes de red, asegúrate de tener los paquetes de protocolo necesarios instalados (por ejemplo, `cifs-utils` para CIFS).
+* El archivo de credenciales para los montajes de red debe estar protegido estableciendo los permisos de archivo correctos. (600)
+* Asegúrate de añadir los valores correctos para los campos `dump` y `pass`.
 
 
 

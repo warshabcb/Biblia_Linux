@@ -109,12 +109,15 @@ alias cl='clear'
 alias update='sudo apt update && sudo apt upgrade -y'
 alias sl='/usr/games/sl'
 alias meminfo='cat /proc/meminfo | grep MemTotal'
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
+alias .. ='cd ..'
+alias ... ='cd ../../'
+alias .... ='cd ../../../'
 alias now='date +"%Y-%m-%d %H:%M:%S"'
 alias myip='curl http://ipinfo.io/ip;echo'
 alias gogo='source ~/.bashrc'
+alias bashrc='nano ~/.bashrc'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias ctrs='source ~/enviroment/ctrs/bin/activate'
 ```
 
 ## $ _ Bash Prompt Generator

@@ -130,7 +130,86 @@ alias ctrs='source ~/enviroment/ctrs/bin/activate'
    ```bash
    PS1='\[\e[1m\]\u@\h\[\e[0m\] \[\e[91m\][\[\e[38;5;214m\]\w\[\e[91m\]]\[\e[0m\] \[\e[38;5;40;1m\]>\[\e[0m\] '
    ```
-   
+
+## fstab Information
+
+The `/etc/fstab` file defines how storage devices are mounted on this system at boot time. Each line in the file represents a mount point, specifying the device, mount point, filesystem type, mount options, and other settings. Understanding these settings is crucial for proper system operation and data integrity. Here's a breakdown of the current configuration:
+
+*   `/dev/sda1`: Root partition, mounted at `/`, `ext4`, `errors=remount-ro`. This is the primary boot partition.
+    *   **Device:** `/dev/sda1` - This is the device node representing the first partition on the first hard drive (or disk).
+    *   **Mount Point:** `/` - This is the root directory of the file system. All other directories are contained within this.
+    *   **Filesystem Type:** `ext4` - This is the filesystem type used to format the partition. `ext4` is a journaling filesystem commonly used on Linux systems.
+    *   **Mount Options:** `errors=remount-ro` - This option specifies what to do if errors are detected on this mount point. In this case, the option remounts the partition as read-only.
+    *   **Dump Field**: `0` - This field (not explicitly shown but it is there), dictates whether the filesystem should be backed up with the `dump` command. 0 means it will not be backed up.
+    *   **Pass Field**: `1`- This field (not explicitly shown but it is there) is used by `fsck` to determine the order in which filesystems should be checked at boot time. The root partition has to be the first to be checked, so it is set to 1.
+
+*   `/dev/sdb1`: Data partition, mounted at `/data`, `ext4`, `defaults`. This partition holds user data.
+    *   **Device:** `/dev/sdb1` - The first partition on the second hard drive.
+    *   **Mount Point:** `/data` - This is the directory where the data partition will be accessible.
+    *   **Filesystem Type:** `ext4` - The same filesystem used for the root partition.
+    *   **Mount Options:** `defaults` - This is a shorthand that represents a set of common options, including `rw`, `suid`, `dev`, `exec`, `auto`, `nouser`, and `async`.
+        *   `rw`: Read and write access.
+        *   `suid`: Allow set-user-identifier or set-group-identifier bits.
+        *   `dev`: Interpret character or block special devices on the filesystem.
+        *   `exec`: Permit execution of binaries.
+        *   `auto`: Mount this filesystem at boot time (or when `mount -a` is used).
+        *   `nouser`: Only root can mount the filesystem.
+        * `async`: All I/O to the filesystem should be done asynchronously
+    * **Dump Field**: `0` - This partition won't be included in the `dump` backups.
+    * **Pass Field**: `2`- Checked after the root partition, the other partitions should have the pass field set to 2.
+
+*   `UUID=some-long-uuid`: Swap partition, mounted as `swap`.
+    *   **Device:** `UUID=some-long-uuid` - Using the UUID (Universally Unique Identifier) is preferred over device names (e.g., `/dev/sdX`) because it's more robust. UUIDs remain consistent even if the disk order changes.
+    *   **Mount Point:** `swap` - This keyword indicates that the partition will be used as a swap partition, not as a regular directory.
+    *   **Filesystem Type:** `swap` - Indicates that the partition is a swap partition.
+    * **Dump Field**: `0` - Swap partition should not be backed up.
+    * **Pass Field**: `0`- Swap partition doesn't need a check.
+
+*   `//192.168.1.10/sharedfolder /mnt/shared cifs user,credentials=/root/.smbcredentials,iocharset=utf8,sec=ntlm 0 0`: Mounts a shared network folder using CIFS.
+    *   **Device:** `//192.168.1.10/sharedfolder` - This is a network path to a shared folder on a server with the IP address 192.168.1.10.
+    *   **Mount Point:** `/mnt/shared` - The local directory where the network share will be mounted.
+    *   **Filesystem Type:** `cifs` - This is the Common Internet File System protocol, commonly used for network shares in Windows environments (also known as SMB).
+    *   **Mount Options:**
+        *   `user`: Allows a non-root user to mount and unmount the share.
+        *   `credentials=/root/.smbcredentials` - Specifies a file containing the username and password for accessing the share. This file should have permissions set to `600` (read/write for the owner, no access for others).
+        *   `iocharset=utf8` - Specifies the character set used for filename encoding. UTF-8 is recommended for broad compatibility.
+        *   `sec=ntlm` - Specifies the security protocol to be used. `ntlm` is a commonly used protocol for SMB. Other options may include `ntlmssp` or `krb5`.
+    * **Dump Field**: `0` - Network partitions should not be backed up.
+    * **Pass Field**: `0`- Network partitions don't need a check.
+
+**Commonly Used Mount Options (Beyond `defaults`):**
+
+*   `noauto`: Do not automatically mount this at boot. You would have to manually mount it.
+*   `user` / `users`: Allow regular users to mount/unmount. `users` allow any user to mount, `user` allow the user who mount the file system to unmount it.
+*   `ro`: Mount as read-only.
+*   `rw`: Mount as read/write (this is usually part of `defaults`).
+*   `noexec`: Do not allow binaries to be executed from this partition.
+*   `nosuid`: Ignore the set-user-ID and set-group-ID bits.
+*   `nodev`: Do not interpret character or block special devices on the filesystem.
+*   `sync`: All I/O to the filesystem should be done synchronously.
+*   `data=journal`: All file data is written into the journal before writing it to the filesystem.
+* `data=ordered`: This is the default. All file data is forced directly out to the main file system prior to its metadata being committed to the journal.
+* `data=writeback`: File data is written into the main filesystem without any ordering guarantees. It may be written into the main file system after its metadata has been committed to the journal.
+*  `nofail`: Do not report errors for this device if it does not exist. This is useful for optional mounts.
+* `x-systemd.automount` : Mount the device when the mount point is accessed.
+
+**Important Notes:**
+
+*   Incorrect entries in `/etc/fstab` can prevent your system from booting. Make sure you have backups before making any changes.
+* Use UUID instead of the device path if possible.
+*   Always test changes in a non-production environment first.
+* If you have the chance, make sure you understand the `mount` command.
+*  Make sure you create the mount point directory, before modifying the file `fstab`.
+* If you are working with sensitive data, make sure you understand the security implications of each option.
+* If you want a mount point to be permanent, add it to the `fstab` file.
+* For network mounts, make sure you have the required protocol packages installed (e.g., `cifs-utils` for CIFS).
+* The credentials file for network mounts should be protected by setting the correct file permissions. (600)
+* Be sure that you add the correct values for the `dump` and `pass` fields.
+
+
+
+
+
 ## Cálculos Aritméticos con la Terminal
 
 Realizar cálculos aritméticos directamente en la terminal de Bash puede ser útil para scripts o simplemente para cálculos rápidos. A continuación, se describen dos métodos principales para realizar operaciones aritméticas en Bash.
